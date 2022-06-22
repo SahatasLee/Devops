@@ -1,18 +1,18 @@
-Docker 101
+# Docker 101
 
 Ref.
 -  https://medium.com/@rachatatongpagdee/docker-%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B9%84%E0%B8%A3-7e77145967b6
 - https://medium.com/i-gear-geek/docker-%E0%B8%84%E0%B8%B7%E0%B8%AD-%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%95%E0%B9%89%E0%B8%99%E0%B8%81%E0%B8%B1%E0%B8%9A-docker-56d0ba499ae8 
 
 
-Docker network 
+# Docker network 
 3 types of docker network
 Bridge network
 None network
 Host network
 Ref. https://medium.com/@somprasongd/docker-networking-59b6637de3df
 
-Docker push
+# Docker push
 Ref. https://docs.docker.com/get-started/04_sharing_app/ 
 
 Command :
@@ -92,11 +92,11 @@ Sudo dockerd
 Ref. Command : https://docs.docker.com/engine/reference/commandline/images/
 
 
-Dockerfile
+# Dockerfile
 Ref. https://medium.com/i-gear-geek/%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%99-docker-file-%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%84%E0%B8%94%E0%B9%89-docker-image-d2dedd10361e
 
 
-Docker-compose
+# Docker-compose
 
 Command 
 `docker-compose up`: create and start containers
