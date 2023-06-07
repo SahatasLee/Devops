@@ -1,0 +1,4 @@
+# Ubuntu
+## config
+
+> /etc/hosts
