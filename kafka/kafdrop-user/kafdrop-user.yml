@@ -1,0 +1,32 @@
+apiVersion: kafka.strimzi.io/v1beta1
+kind: KafkaUser
+metadata:
+  name: kafdrop-user
+  labels:
+    strimzi.io/cluster: kafka-cluster-prd
+spec:
+  authentication:
+    type: scram-sha-512
+  authorization:
+    type: simple
+    acls:
+      - resource:
+          type: topic
+          name: '*'
+          patternType: literal
+        operation: All
+      - resource:
+          type: cluster
+          name: '*'
+          patternType: literal
+        operation: All
+      - resource:
+          type: group
+          name: '*'
+          patternType: literal
+        operation: All
+      - resource:
+          type: transactionalId
+          name: '*'
+          patternType: literal
+        operation: All
