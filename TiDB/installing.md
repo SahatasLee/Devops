@@ -1,7 +1,5 @@
 # Installation TiDB on Kubernetes
 
----
-
 ## Prerequisition
 
 Step 1. Assume to have kube cluster already
