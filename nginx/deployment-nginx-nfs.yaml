@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-nginx-nfs
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: www
+          mountPath: /usr/share/nginx/html
+      volumes:
+      - name: www
+        persistentVolumeClaim:
+          claimName: pvc-nginx-nfs
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-nginx-nfs
+spec:
+  storageClassName: nfs
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 2Gi

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: minio-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi  # Adjust the storage capacity as per your requirements, should match the PV
+  storageClassName: "nfs"  # Remove this line if you don't use storage classes
+  # volumeName: minio-pv  # Name of the PV created in step 2
