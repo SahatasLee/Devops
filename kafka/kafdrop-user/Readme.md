@@ -23,4 +23,4 @@ run kafdrop on ansible node
         -e CMD_ARGS="--topic.deleteEnabled=false --topic.createEnabled=false" \
         -v /etc/localtime:/etc/localtime:ro \
         obsidiandynamics/kafdrop
-    docker ps #for check image is running.
+    docker ps #for check image is running

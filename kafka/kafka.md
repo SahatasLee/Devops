@@ -39,13 +39,13 @@ wait until pod stimzi-cluster-operator is complete
 config ip loadbalancer and storage class in kafka-cluster/kafka-cluster.yaml
 
     bootstrap:
-        loadBalancerIP: 10.111.0.28
+        loadBalancerIP: 10.111.0.28 # change here
     brokers:
     - broker: 0
-        loadBalancerIP: 10.111.0.29
+        loadBalancerIP: 10.111.0.29 # change here
     - broker: 1
-        loadBalancerIP: 10.111.0.30
+        loadBalancerIP: 10.111.0.30 # change here
     - broker: 2
-        loadBalancerIP: 10.111.0.31
+        loadBalancerIP: 10.111.0.31 # change here
 
 and storage class line 68, 108 change to your pvc
