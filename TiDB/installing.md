@@ -4,11 +4,14 @@
 
 Step 1. Assume to have kube cluster already
 helm should be preinstalled
+
 Step 2. Deploy TiDB Operator
 You need to install TiDB Operator CRDs first, and then install TiDB Operator.
 
-Install TiDB Operator CRDs
+### Install TiDB Operator CRDs
+
 TiDB Operator includes a number of Custom Resource Definitions (CRDs) that implement different components of the TiDB cluster.
+
 Run the following command to install the CRDs into your cluster:
 
     kubectl create -f https://raw.githubusercontent.com/pingcap/tidb-operator/master/manifests/crd.yaml
@@ -17,12 +20,20 @@ OR
 
     kubectl create -f https://raw.githubusercontent.com/pingcap/tidb-operator/v1.3.9/manifests/crd.yaml
 
-Expected output
+Expected output:
+
+    customresourcedefinition.apiextensions.k8s.io/tidbclusters.pingcap.com created
+    customresourcedefinition.apiextensions.k8s.io/backups.pingcap.com created
+    customresourcedefinition.apiextensions.k8s.io/restores.pingcap.com created
+    customresourcedefinition.apiextensions.k8s.io/backupschedules.pingcap.com created
+    customresourcedefinition.apiextensions.k8s.io/tidbmonitors.pingcap.com created
+    customresourcedefinition.apiextensions.k8s.io/tidbinitializers.pingcap.com created
+    customresourcedefinition.apiextensions.k8s.io/tidbclusterautoscalers.pingcap.com created
 
 Note
 For Kubernetes earlier than 1.16, only v1beta1 CRD is supported. Therefore, you need to change crd.yaml in the preceding command to crd_v1beta1.yaml.
 
-## Install TiDB Operator
+### Install TiDB Operator
 
 This section describes how to install TiDB Operator using Helm 3.
 
@@ -31,20 +42,43 @@ This section describes how to install TiDB Operator using Helm 3.
         helm repo add pingcap https://charts.pingcap.org/
 
     • Expected output
+
+        "pingcap" has been added to your repositories
+
     • Create a namespace for TiDB Operator:
 
         kubectl create namespace tidb-operator
 
     • Expected output
+
+        namespace/tidb-admin created
+
     • Install TiDB Operator
 
         helm install --namespace tidb-operator tidb-operator pingcap/tidb-operator --version v1.3.9
+
+    • Expected output
+
+        NAME: tidb-operator
+        LAST DEPLOYED: Mon Jun  1 12:31:43 2020
+        NAMESPACE: tidb-admin
+        STATUS: deployed
+        REVISION: 1
+        TEST SUITE: None
+        NOTES:
+        Make sure tidb-operator components are running:
+
+            kubectl get pods --namespace tidb-admin -l app.kubernetes.io/instance=tidb-operator
 
 2. To confirm that the TiDB Operator components are running, run the following command:
 
         kubectl get pods --namespace tidb-operator -l app.kubernetes.io/instance=tidb-operator
 
-    **Expected output:**
+    • Expected output
+
+        NAME                                       READY   STATUS    RESTARTS   AGE
+        tidb-controller-manager-6d8d5c6d64-b8lv4   1/1     Running   0          2m22s
+        tidb-scheduler-644d59b46f-4f6sb            2/2     Running   0          2m22s
 
     As soon as all Pods are in the "Running" state, proceed to the next step.
 
@@ -56,13 +90,19 @@ This section describes how to install TiDB Operator using Helm 3.
 
         kubectl create namespace tidb-cluster
 
-        kubectl -n tidb-cluster apply -f tidb-cluster.yaml
+    • Expected output
 
-> Note : see tidb-cluster.yaml file (edit storageclassname and size of TIKV & PD)
+        namespace/tidb-cluster created
 
 ---
 
-The **Tidb-cluster.yaml** file:
+### Install TiDB cluster
+
+    kubectl -n tidb-cluster apply -f tidb-cluster.yaml
+
+> Note : see tidb-cluster.yaml file (edit storageclassname and size of TIKV & PD)
+
+The **tidb-cluster.yaml** file:
 
     apiVersion: pingcap.com/v1alpha1
     kind: TidbCluster
@@ -194,7 +234,7 @@ The **Tidb-cluster.yaml** file:
 
 ---
 
-## Deploy TiDB monitoring services
+### Deploy TiDB monitoring services
 
     kubectl -n tidb-cluster apply -f tidb-monitoring.yaml
 
@@ -228,7 +268,7 @@ The **tidb-monitoring.yaml** file:
 
 ---
 
-## TiDB Dashboard
+### TiDB Dashboard
 
     kubectl apply -n tidb-cluster -f tidbngmonitoring.yaml
 
