@@ -1,0 +1,17 @@
+scheduler:
+  create: true
+  # With rbac.create=false, the user is responsible for creating this account
+  # With rbac.create=true, this service account will be created
+  # Also see rbac.create and clusterScoped
+  serviceAccount: tidb-scheduler
+  logLevel: 2
+  replicas: 1
+  schedulerName: tidb-scheduler
+  resources:
+    limits:
+      cpu: 250m
+      memory: 150Mi
+    requests:
+      cpu: 80m
+      memory: 50Mi
+  kubeSchedulerImageName: registry.k8s.io/kube-scheduler

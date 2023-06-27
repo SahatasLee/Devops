@@ -30,8 +30,21 @@ Expected output:
     customresourcedefinition.apiextensions.k8s.io/tidbinitializers.pingcap.com created
     customresourcedefinition.apiextensions.k8s.io/tidbclusterautoscalers.pingcap.com created
 
-Note
-For Kubernetes earlier than 1.16, only v1beta1 CRD is supported. Therefore, you need to change crd.yaml in the preceding command to crd_v1beta1.yaml.
+or v1.3.9
+
+    customresourcedefinition.apiextensions.k8s.io/backupschedules.pingcap.com created
+    customresourcedefinition.apiextensions.k8s.io/backups.pingcap.com created
+    customresourcedefinition.apiextensions.k8s.io/dmclusters.pingcap.com created
+    customresourcedefinition.apiextensions.k8s.io/restores.pingcap.com created
+    customresourcedefinition.apiextensions.k8s.io/tidbclusterautoscalers.pingcap.com created
+    customresourcedefinition.apiextensions.k8s.io/tidbclusters.pingcap.com created
+    customresourcedefinition.apiextensions.k8s.io/tidbinitializers.pingcap.com created
+    customresourcedefinition.apiextensions.k8s.io/tidbmonitors.pingcap.com created
+    customresourcedefinition.apiextensions.k8s.io/tidbngmonitorings.pingcap.com created
+
+> Note
+> For Kubernetes earlier than 1.16, only v1beta1 CRD is supported.
+> Therefore, you need to change crd.yaml in the preceding command to crd_v1beta1.yaml.
 
 ### Install TiDB Operator
 
@@ -51,24 +64,44 @@ This section describes how to install TiDB Operator using Helm 3.
 
     • Expected output
 
-        namespace/tidb-admin created
+        namespace/tidb-operator created
+
+    create file **tidb-operator-values.yaml**
+
+        scheduler:
+        create: true
+        # With rbac.create=false, the user is responsible for creating this account
+        # With rbac.create=true, this service account will be created
+        # Also see rbac.create and clusterScoped
+        serviceAccount: tidb-scheduler
+        logLevel: 2
+        replicas: 1
+        schedulerName: tidb-scheduler
+        resources:
+            limits:
+            cpu: 250m
+            memory: 150Mi
+            requests:
+            cpu: 80m
+            memory: 50Mi
+        kubeSchedulerImageName: registry.k8s.io/kube-scheduler
 
     • Install TiDB Operator
 
-        helm install --namespace tidb-operator tidb-operator pingcap/tidb-operator --version v1.3.9
+        helm install --namespace tidb-operator tidb-operator pingcap/tidb-operator --version v1.3.9 -f tidb-operator-values.yaml
 
     • Expected output
 
         NAME: tidb-operator
-        LAST DEPLOYED: Mon Jun  1 12:31:43 2020
-        NAMESPACE: tidb-admin
+        LAST DEPLOYED: Wed Jun 21 12:12:19 2023
+        NAMESPACE: tidb-operator
         STATUS: deployed
         REVISION: 1
         TEST SUITE: None
         NOTES:
         Make sure tidb-operator components are running:
 
-            kubectl get pods --namespace tidb-admin -l app.kubernetes.io/instance=tidb-operator
+            kubectl get pods --namespace tidb-operator -l app.kubernetes.io/instance=tidb-operator
 
 2. To confirm that the TiDB Operator components are running, run the following command:
 
@@ -77,160 +110,148 @@ This section describes how to install TiDB Operator using Helm 3.
     • Expected output
 
         NAME                                       READY   STATUS    RESTARTS   AGE
-        tidb-controller-manager-6d8d5c6d64-b8lv4   1/1     Running   0          2m22s
-        tidb-scheduler-644d59b46f-4f6sb            2/2     Running   0          2m22s
+        tidb-controller-manager-7fb56cccb7-rm8dz   1/1     Running   0          10s
+        tidb-scheduler-6b5cc4bd-kr2q4              2/2     Running   0          10s
 
     As soon as all Pods are in the "Running" state, proceed to the next step.
-
-3. Deploy a TiDB cluster and its monitoring services
-
-    This section describes how to deploy a TiDB cluster and its monitoring services.
-
-    **Deploy a TiDB cluster**
-
-        kubectl create namespace tidb-cluster
-
-    • Expected output
-
-        namespace/tidb-cluster created
 
 ---
 
 ### Install TiDB cluster
 
+Deploy a TiDB cluster and its monitoring services
+
+This section describes how to deploy a TiDB cluster and its monitoring services.
+
+#### Deploy a TiDB cluster
+
+    kubectl create namespace tidb-cluster
+
+• Expected output
+
+    namespace/tidb-cluster created
+
+• Install TiDB-cluster
+
     kubectl -n tidb-cluster apply -f tidb-cluster.yaml
 
+• Get Logs
+
+    kubectl logs -n tidb-cluster basic-tiflash-0 -c tiflash
+
 > Note : see tidb-cluster.yaml file (edit storageclassname and size of TIKV & PD)
+>
+> IF error, change storage class to local-path
 
 The **tidb-cluster.yaml** file:
 
-    apiVersion: pingcap.com/v1alpha1
-    kind: TidbCluster
-    metadata:
+apiVersion: pingcap.com/v1alpha1
+kind: TidbCluster
+metadata:
     name: basic
     namespace: tidb-cluster
-    spec:
-    version: v6.1.0
-    timezone: Asia/Bangkok
-    pvReclaimPolicy: Retain
-    enableDynamicConfiguration: true
-    configUpdateStrategy: RollingUpdate
-    discovery: {}
-    helper:
-        image: alpine:3.16.0
-    pd:
-        baseImage: pingcap/pd
-        maxFailoverCount: 0
-        replicas: 3
-        # if storageClassName is not set, the default Storage Class of the Kubernetes cluster will be used
-        enableDashboardInternalProxy: true
-        #limits:
-        #cpu: "8"
-        #memory: "16Gi"
-        requests:
-        cpu: "4"
-        memory: "8Gi"
-        storage: "5Gi"
-        storageClassName: ceph-block #please change to match sc name
-        service:
-        type: LoadBalancer
-        affinity:
-            podAntiAffinity:
-                requiredDuringSchedulingIgnoredDuringExecution:
-                - labelSelector:
-                    matchExpressions:
-                        - key: app.kubernetes.io/component
-                        operator: In
-                        values:
-                            - pd
-                    topologyKey: "kubernetes.io/hostname"
-        config: {}
-    tikv:
-        baseImage: pingcap/tikv
-        maxFailoverCount: 0
-        # If only 1 TiKV is deployed, the TiKV region leader 
-        # cannot be transferred during upgrade, so we have
-        # to configure a short timeout
-        evictLeaderTimeout: 1m
-        replicas: 3
-        # if storageClassName is not set, the default Storage Class of the Kubernetes cluster will be used
-        #limits:
-        #cpu: "16"
-        #memory: "64Gi"
-        requests:
-        cpu: "8"
-        memory: "32Gi"
-        storage: "8Gi"
-        storageClassName: ceph-block #please change to match sc name
-        config:
-        storage:
-            # In basic examples, we set this to avoid using too much storage.
-            reserve-space: "0MB"
-        rocksdb:
-            # In basic examples, we set this to avoid the following error in some Kubernetes clusters:
-            # "the maximum number of open file descriptors is too small, got 1024, expect greater or equal to 82920"
-            max-open-files: 256
-        raftdb:
-            max-open-files: 256
-        affinity:
-            podAntiAffinity:
-                requiredDuringSchedulingIgnoredDuringExecution:
-                - labelSelector:
-                    matchExpressions:
-                        - key: app.kubernetes.io/component
-                        operator: In
-                        values:
-                            - tikv
-                    topologyKey: "kubernetes.io/hostname"
-    tidb:
-        baseImage: pingcap/tidb
-        maxFailoverCount: 0
-        replicas: 3
-        limits:
-        #cpu: "16"
-        #memory: "48Gi"
-        requests:
-        cpu: "8"
-        memory: "24Gi" 
-        service:
-        type: LoadBalancer
-        affinity:
-            podAntiAffinity:
-                requiredDuringSchedulingIgnoredDuringExecution:
-                - labelSelector:
-                    matchExpressions:
-                        - key: app.kubernetes.io/component
-                        operator: In
-                        values:
-                            - tidb
-                    topologyKey: "kubernetes.io/hostname"
-        config: {}
-    tiflash:
-        affinity:
-        podAntiAffinity:
-            requiredDuringSchedulingIgnoredDuringExecution:
-            - labelSelector:
-                matchExpressions:
+spec:
+  version: v6.1.0
+  timezone: Asia/Bangkok
+  pvReclaimPolicy: Retain
+  enableDynamicConfiguration: true
+  configUpdateStrategy: RollingUpdate
+  discovery: {}
+  helper:
+    image: alpine:3.16.0
+  pd:
+    baseImage: pingcap/pd
+    maxFailoverCount: 0
+    replicas: 3
+    enableDashboardInternalProxy: true
+    requests:
+      cpu: "4"
+      memory: "8Gi"
+      storage: "5Gi"
+    storageClassName: ceph-block #please change to match sc name
+    service:
+      type: LoadBalancer
+    affinity:
+      podAntiAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
                 - key: app.kubernetes.io/component
-                operator: In
-                values:
-                - tiflash
+                  operator: In
+                  values:
+                    - pd
+            topologyKey: "kubernetes.io/hostname"
+    config: {}
+  tikv:
+    baseImage: pingcap/tikv
+    maxFailoverCount: 0
+    evictLeaderTimeout: 1m
+    replicas: 3
+    requests:
+      cpu: "8"
+      memory: "32Gi"
+      storage: "8Gi"
+    storageClassName: ceph-block #please change to match sc name
+    config:
+      storage:
+        reserve-space: "0MB"
+    rocksdb:
+      max-open-files: 256
+    raftdb:
+      max-open-files: 256
+    affinity:
+      podAntiAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+                - key: app.kubernetes.io/component
+                  operator: In
+                  values:
+                    - tikv
+            topologyKey: "kubernetes.io/hostname"
+  tidb:
+    baseImage: pingcap/tidb
+    maxFailoverCount: 0
+    replicas: 3
+    requests:
+      cpu: "8"
+      memory: "24Gi"
+    service:
+      type: LoadBalancer
+    affinity:
+      podAntiAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+                - key: app.kubernetes.io/component
+                  operator: In
+                  values:
+                    - tidb
+            topologyKey: "kubernetes.io/hostname"
+    config: {}
+  tiflash:
+    affinity:
+      podAntiAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+                - key: app.kubernetes.io/component
+                  operator: In
+                  values:
+                    - tiflash
             topologyKey: kubernetes.io/hostname
-        baseImage: pingcap/tiflash
-        maxFailoverCount: 0
-        replicas: 3
-        limits:
-        #cpu: "48"
-        #memory: "128Gi"
-        requests:
-        cpu: "8"
-        memory: "24Gi"
-        storageClaims:
-        - resources:
-            requests:
+    baseImage: pingcap/tiflash
+    maxFailoverCount: 0
+    replicas: 3
+    requests:
+      cpu: "8"
+      memory: "24Gi"
+    storageClaims:
+      - resources:
+          requests:
             storage: 5Gi
-        storageClassName: ceph-block #please change to match sc name
-        config: {}
+    storageClassName: ceph-block #please change to match sc name
+    config: {}
 
 ---
 
@@ -306,3 +327,9 @@ Expected output
 > Wait until all Pods for all services are started. As soon as you see Pods of each type (-pd, -tikv, and -tidb) are in the "Running" state, you can press Ctrl+C to get back to the command line and go on to connect to your TiDB cluster.
 
 From <https://docs.pingcap.com/tidb-in-kubernetes/dev/get-started#step-2-deploy-tidb-operator>
+
+## Connecting TiDB using Dbeaver
+
+1. Download dbeaver
+2. Connecting 10.xxx.x.xxx:4000
+3.

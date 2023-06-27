@@ -22,10 +22,10 @@ spec:
       #cpu: "8"
       #memory: "16Gi"
     requests:
-      cpu: "1"
-      memory: "2Gi"
+      cpu: "4"
+      memory: "4Gi"
       storage: "5Gi"
-    storageClassName: local-path #please change to match sc name
+    storageClassName: nfs #please change to match sc name
     service:
       type: LoadBalancer
     affinity:
@@ -52,10 +52,10 @@ spec:
       #cpu: "16"
       #memory: "64Gi"
     requests:
-      cpu: "1"
-      memory: "2Gi"
+      cpu: "4"
+      memory: "4Gi"
       storage: "8Gi"
-    storageClassName: local-path #please change to match sc name
+    storageClassName: nfs #please change to match sc name
     config:
       storage:
         # In basic examples, we set this to avoid using too much storage.
@@ -84,8 +84,8 @@ spec:
       #cpu: "16"
       #memory: "48Gi"
     requests:
-      cpu: "1"
-      memory: "2Gi" 
+      cpu: "4"
+      memory: "4Gi" 
     service:
       type: LoadBalancer
     affinity:
@@ -117,11 +117,11 @@ spec:
       #cpu: "48"
       #memory: "128Gi"
     requests:
-      cpu: "1"
-      memory: "2Gi"
+      cpu: "4"
+      memory: "4Gi"
     storageClaims:
     - resources:
         requests:
           storage: 5Gi
-      storageClassName: local-path #please change to match sc name
+      storageClassName: nfs #please change to match sc name
     config: {}
