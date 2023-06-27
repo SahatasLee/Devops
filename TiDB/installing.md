@@ -145,113 +145,113 @@ This section describes how to deploy a TiDB cluster and its monitoring services.
 
 The **tidb-cluster.yaml** file:
 
-apiVersion: pingcap.com/v1alpha1
-kind: TidbCluster
-metadata:
-    name: basic
-    namespace: tidb-cluster
-spec:
-  version: v6.1.0
-  timezone: Asia/Bangkok
-  pvReclaimPolicy: Retain
-  enableDynamicConfiguration: true
-  configUpdateStrategy: RollingUpdate
-  discovery: {}
-  helper:
-    image: alpine:3.16.0
-  pd:
-    baseImage: pingcap/pd
-    maxFailoverCount: 0
-    replicas: 3
-    enableDashboardInternalProxy: true
-    requests:
-      cpu: "4"
-      memory: "8Gi"
-      storage: "5Gi"
-    storageClassName: ceph-block #please change to match sc name
-    service:
-      type: LoadBalancer
-    affinity:
-      podAntiAffinity:
-        requiredDuringSchedulingIgnoredDuringExecution:
-          - labelSelector:
-              matchExpressions:
-                - key: app.kubernetes.io/component
-                  operator: In
-                  values:
-                    - pd
-            topologyKey: "kubernetes.io/hostname"
-    config: {}
-  tikv:
-    baseImage: pingcap/tikv
-    maxFailoverCount: 0
-    evictLeaderTimeout: 1m
-    replicas: 3
-    requests:
-      cpu: "8"
-      memory: "32Gi"
-      storage: "8Gi"
-    storageClassName: ceph-block #please change to match sc name
-    config:
-      storage:
-        reserve-space: "0MB"
-    rocksdb:
-      max-open-files: 256
-    raftdb:
-      max-open-files: 256
-    affinity:
-      podAntiAffinity:
-        requiredDuringSchedulingIgnoredDuringExecution:
-          - labelSelector:
-              matchExpressions:
-                - key: app.kubernetes.io/component
-                  operator: In
-                  values:
-                    - tikv
-            topologyKey: "kubernetes.io/hostname"
-  tidb:
-    baseImage: pingcap/tidb
-    maxFailoverCount: 0
-    replicas: 3
-    requests:
-      cpu: "8"
-      memory: "24Gi"
-    service:
-      type: LoadBalancer
-    affinity:
-      podAntiAffinity:
-        requiredDuringSchedulingIgnoredDuringExecution:
-          - labelSelector:
-              matchExpressions:
-                - key: app.kubernetes.io/component
-                  operator: In
-                  values:
-                    - tidb
-            topologyKey: "kubernetes.io/hostname"
-    config: {}
-  tiflash:
-    affinity:
-      podAntiAffinity:
-        requiredDuringSchedulingIgnoredDuringExecution:
-          - labelSelector:
-              matchExpressions:
-                - key: app.kubernetes.io/component
-                  operator: In
-                  values:
-                    - tiflash
-            topologyKey: kubernetes.io/hostname
-    baseImage: pingcap/tiflash
-    maxFailoverCount: 0
-    replicas: 3
-    requests:
-      cpu: "8"
-      memory: "24Gi"
-    storageClaims:
-      - resources:
-          requests:
-            storage: 5Gi
-    storageClassName: ceph-block #please change to match sc name
-    config: {}
+    apiVersion: pingcap.com/v1alpha1
+    kind: TidbCluster
+    metadata:
+        name: basic
+        namespace: tidb-cluster
+    spec:
+      version: v6.1.0
+      timezone: Asia/Bangkok
+      pvReclaimPolicy: Retain
+      enableDynamicConfiguration: true
+      configUpdateStrategy: RollingUpdate
+      discovery: {}
+      helper:
+        image: alpine:3.16.0
+      pd:
+        baseImage: pingcap/pd
+        maxFailoverCount: 0
+        replicas: 3
+        enableDashboardInternalProxy: true
+        requests:
+          cpu: "4"
+          memory: "8Gi"
+          storage: "5Gi"
+        storageClassName: ceph-block #please change to match sc name
+        service:
+          type: LoadBalancer
+        affinity:
+          podAntiAffinity:
+            requiredDuringSchedulingIgnoredDuringExecution:
+              - labelSelector:
+                  matchExpressions:
+                    - key: app.kubernetes.io/component
+                      operator: In
+                      values:
+                        - pd
+                topologyKey: "kubernetes.io/hostname"
+        config: {}
+      tikv:
+        baseImage: pingcap/tikv
+        maxFailoverCount: 0
+        evictLeaderTimeout: 1m
+        replicas: 3
+        requests:
+          cpu: "8"
+          memory: "32Gi"
+          storage: "8Gi"
+        storageClassName: ceph-block #please change to match sc name
+        config:
+          storage:
+            reserve-space: "0MB"
+        rocksdb:
+          max-open-files: 256
+        raftdb:
+          max-open-files: 256
+        affinity:
+          podAntiAffinity:
+            requiredDuringSchedulingIgnoredDuringExecution:
+              - labelSelector:
+                  matchExpressions:
+                    - key: app.kubernetes.io/component
+                      operator: In
+                      values:
+                        - tikv
+                topologyKey: "kubernetes.io/hostname"
+      tidb:
+        baseImage: pingcap/tidb
+        maxFailoverCount: 0
+        replicas: 3
+        requests:
+          cpu: "8"
+          memory: "24Gi"
+        service:
+          type: LoadBalancer
+        affinity:
+          podAntiAffinity:
+            requiredDuringSchedulingIgnoredDuringExecution:
+              - labelSelector:
+                  matchExpressions:
+                    - key: app.kubernetes.io/component
+                      operator: In
+                      values:
+                        - tidb
+                topologyKey: "kubernetes.io/hostname"
+        config: {}
+      tiflash:
+        affinity:
+          podAntiAffinity:
+            requiredDuringSchedulingIgnoredDuringExecution:
+              - labelSelector:
+                  matchExpressions:
+                    - key: app.kubernetes.io/component
+                      operator: In
+                      values:
+                        - tiflash
+                topologyKey: kubernetes.io/hostname
+        baseImage: pingcap/tiflash
+        maxFailoverCount: 0
+        replicas: 3
+        requests:
+          cpu: "8"
+          memory: "24Gi"
+        storageClaims:
+          - resources:
+              requests:
+                storage: 5Gi
+        storageClassName: ceph-block #please change to match sc name
+        config: {}
 
 ---
 
