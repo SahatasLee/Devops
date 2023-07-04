@@ -123,6 +123,8 @@ Deploy a TiDB cluster and its monitoring services
 
 This section describes how to deploy a TiDB cluster and its monitoring services.
 
+> Note! TiFlash not need
+
 #### Deploy a TiDB cluster
 
     kubectl create namespace tidb-cluster
@@ -134,6 +136,14 @@ This section describes how to deploy a TiDB cluster and its monitoring services.
 • Install TiDB-cluster
 
     kubectl -n tidb-cluster apply -f tidb-cluster.yaml
+
+• Expected output
+
+    tidbcluster.pingcap.com/basic created
+
+• Watch Pod
+
+    watch kubectl -n tidb-cluster get po
 
 • Get Logs
 
@@ -162,13 +172,13 @@ The **tidb-cluster.yaml** file:
       pd:
         baseImage: pingcap/pd
         maxFailoverCount: 0
-        replicas: 3
+        replicas: 2
         enableDashboardInternalProxy: true
         requests:
-          cpu: "4"
-          memory: "8Gi"
+          cpu: "1"
+          memory: "2Gi"
           storage: "5Gi"
-        storageClassName: ceph-block #please change to match sc name
+        storageClassName: local-path #please change to match sc name
         service:
           type: LoadBalancer
         affinity:
@@ -186,12 +196,12 @@ The **tidb-cluster.yaml** file:
         baseImage: pingcap/tikv
         maxFailoverCount: 0
         evictLeaderTimeout: 1m
-        replicas: 3
+        replicas: 2
         requests:
-          cpu: "8"
-          memory: "32Gi"
+          cpu: "1"
+          memory: "2Gi"
           storage: "8Gi"
-        storageClassName: ceph-block #please change to match sc name
+        storageClassName: local-path #please change to match sc name
         config:
           storage:
             reserve-space: "0MB"
@@ -212,10 +222,10 @@ The **tidb-cluster.yaml** file:
       tidb:
         baseImage: pingcap/tidb
         maxFailoverCount: 0
-        replicas: 3
+        replicas: 2
         requests:
-          cpu: "8"
-          memory: "24Gi"
+          cpu: "1"
+          memory: "2Gi"
         service:
           type: LoadBalancer
         affinity:
@@ -242,15 +252,15 @@ The **tidb-cluster.yaml** file:
                 topologyKey: kubernetes.io/hostname
         baseImage: pingcap/tiflash
         maxFailoverCount: 0
-        replicas: 3
+        replicas: 2
         requests:
-          cpu: "8"
-          memory: "24Gi"
+          cpu: "1"
+          memory: "2Gi"
         storageClaims:
           - resources:
               requests:
                 storage: 5Gi
-        storageClassName: ceph-block #please change to match sc name
+        storageClassName: local-path #please change to match sc name
         config: {}
 
 ---
@@ -332,4 +342,7 @@ From <https://docs.pingcap.com/tidb-in-kubernetes/dev/get-started#step-2-deploy-
 
 1. Download dbeaver
 2. Connecting 10.xxx.x.xxx:4000
-3.
+
+## Connecting Dashboard
+
+        10.xxx.xxx.xxx:2379/dashboard

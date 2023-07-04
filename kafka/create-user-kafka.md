@@ -66,7 +66,7 @@ output
 
 Check
 
-    kubectl get ku –n kafka
+    kubectl get ku <your user> –n kafka
 
 Get kafka password
 

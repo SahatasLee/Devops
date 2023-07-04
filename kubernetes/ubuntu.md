@@ -1,4 +1,5 @@
 # Ubuntu
+
 ## config
 
-> /etc/hosts
+    cd /etc/hosts

@@ -72,3 +72,33 @@
     [2023/06/22 22:49:47.501 +07:00] [INFO] [config.rs:2041] ["readpool.storage.use-unified-pool is not set, set to true by default"]
     [2023/06/22 22:49:47.501 +07:00] [INFO] [config.rs:2064] ["readpool.coprocessor.use-unified-pool is not set, set to true by default"]
     [2023/06/22 22:49:47.507 +07:00] [FATAL] [setup.rs:304] ["invalid configuration: Found raft data set when it should not exist."]
+
+### SVC
+
+    Name:                     basic-pd
+    Namespace:                tidb-cluster
+    Labels:                   app.kubernetes.io/component=pd
+                            app.kubernetes.io/instance=basic
+                            app.kubernetes.io/managed-by=tidb-operator
+                            app.kubernetes.io/name=tidb-cluster
+                            app.kubernetes.io/used-by=end-user
+    Annotations:              metallb.universe.tf/ip-allocated-from-pool: first-pool
+                            pingcap.com/last-applied-configuration:
+                                {"ports":[{"name":"client","protocol":"TCP","port":2379,"targetPort":2379}],"selector":{"app.kubernetes.io/component":"pd","app.kubernetes...
+    Selector:                 app.kubernetes.io/component=pd,app.kubernetes.io/instance=basic,app.kubernetes.io/managed-by=tidb-operator,app.kubernetes.io/name=tidb-cluster
+    Type:                     LoadBalancer
+    IP Family Policy:         SingleStack
+    IP Families:              IPv4
+    IP:                       10.233.37.178
+    IPs:                      10.233.37.178
+    LoadBalancer Ingress:     10.111.0.116
+    Port:                     client  2379/TCP
+    TargetPort:               2379/TCP
+    NodePort:                 client  32486/TCP
+    Endpoints:                10.233.102.177:2379,10.233.71.45:2379
+    Session Affinity:         None
+    External Traffic Policy:  Cluster
+    Events:
+    Type    Reason       Age   From                Message
+    ----    ------       ----  ----                -------
+    Normal  IPAllocated  104s  metallb-controller  Assigned IP ["10.111.0.116"]
