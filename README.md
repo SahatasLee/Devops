@@ -6,3 +6,4 @@
 - kafka
 - minio
 - TiDB
+- ELK

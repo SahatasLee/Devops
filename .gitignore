@@ -1,0 +1,3 @@
+go.*
+ECK/otel-python-backend/__pycache__/
+ECK/otel-python-backend/.venv/

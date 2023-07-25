@@ -1,0 +1,32 @@
+apiVersion: apm.k8s.elastic.co/v1
+kind: ApmServer
+metadata:
+  name: apm-server
+  namespace: default
+spec:
+  version: 8.5.0
+  count: 1
+  elasticsearchRef:
+    name: elasticsearch
+  kibanaRef:
+    name: kibana
+  http:
+    service:
+      spec:
+        type: LoadBalancer
+        loadBalancerIP: 10.111.0.122
+    tls:
+      selfSignedCertificate:  ### disable tls will be easy for test
+        disabled: true        ### not recommend for production
+#enable Real User Monitoring (RUM) 
+  config:
+      apm-server:
+        rum.enabled: true
+        ilm.enabled: true
+        event_rate.limit: 300
+        event_rate.lru_size: 1000
+        allow_origins: ['*']
+        library_pattern: "node_modules|bower_components|~"
+        exclude_from_grouping: "^/webpack"
+        source_mapping.cache.expiration: 5m
+        source_mapping.index_pattern: "apm-*-sourcemap*"
