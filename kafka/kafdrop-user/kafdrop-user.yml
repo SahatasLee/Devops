@@ -3,7 +3,7 @@ kind: KafkaUser
 metadata:
   name: kafdrop-user
   labels:
-    strimzi.io/cluster: kafka-cluster-prd
+    strimzi.io/cluster: kafka-cluster-poc
 spec:
   authentication:
     type: scram-sha-512

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: minio-pv
+spec:
+  capacity:
+    storage: 10Gi  # Adjust the storage capacity as per your requirements
+  accessModes:
+    - ReadWriteOnce
+  nfs:
+    server: <nfs-server-ip>  # Replace with the IP address of your NFS server
+    path: /path/to/export  # Replace with the NFS export path on the server

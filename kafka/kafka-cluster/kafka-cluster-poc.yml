@@ -25,14 +25,14 @@ spec:
          type: scram-sha-512
         configuration:
           bootstrap:
-            loadBalancerIP: 10.111.0.28
+            loadBalancerIP: 10.111.0.28 # here
           brokers:
           - broker: 0
-            loadBalancerIP: 10.111.0.29
+            loadBalancerIP: 10.111.0.29 # here
           - broker: 1
-            loadBalancerIP: 10.111.0.30
+            loadBalancerIP: 10.111.0.30 # here
           - broker: 2
-            loadBalancerIP: 10.111.0.31
+            loadBalancerIP: 10.111.0.31 # here
     authorization:
       type: simple
     config:
@@ -65,7 +65,7 @@ spec:
       - id: 0
         type: persistent-claim
         size: 10Gi
-        class: nfs-client
+        class: nfs
         deleteClaim: false
     template:
       kafkaContainer:
@@ -105,7 +105,7 @@ spec:
     storage:
       type: persistent-claim
       size: 5Gi
-      class: nfs-client
+      class: nfs
       deleteClaim: false
     template:
       zookeeperContainer:

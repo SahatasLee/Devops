@@ -1,0 +1,53 @@
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaConnector
+metadata:
+  name: name # rename
+  labels:
+    strimzi.io/cluster: kafka-connect-prd
+spec:
+  class: io.debezium.connector.sqlserver.SqlServerConnector
+  tasksMax: 1
+  config:
+    database.hostname: 127.0.0.1 # here
+    database.port: "1433" # here
+    database.user: "admin" # here
+    database.password: "12341234" # here
+    database.dbname: "sap" # here
+    database.server.name: "o-sap" # here
+    database.history.kafka.topic: "o-sap" # here
+    table.include.list: "something" # here
+    transforms.route.replacement: "sth" # here
+    #config mode
+    snapshot.isolation.mode: "read_committed"
+    topic.creation.default.replication.factor: 1
+    topic.creation.default.partitions: 3
+    topic.creation.default.delete.retention.ms: 3
+    topic.creation.default.cleanup.policy: "compact"
+    topic.creation.default.retention.ms: 10080
+    time.precision.mode: "connect"
+    decimal.handling.mode: "double"
+    binary.handling.mode: "bytes"
+    #Additional Timestamp converter to transforms
+    transforms: "route,TimestampConverter"
+    #------------------------------------------------------------------------------------------------
+    transforms.route.type: "org.apache.kafka.connect.transforms.RegexRouter"
+    transforms.route.regex: "([^.]+)\\.([^.]+)\\.([^.]+)"
+    #Additional configuration for testing
+    key.converter: "org.apache.kafka.connect.json.JsonConverter"
+    value.converter: "org.apache.kafka.connect.json.JsonConverter"
+    key.converter.schemas.enable: "true"
+    value.converter.schemas.enable: "true"
+    tasks.max: "1"
+    database.server.timezone: "UTC"
+    transforms.TimestampConverter.type: "org.apache.kafka.connect.transforms.TimestampConverter$Value"
+    transforms.TimestampConverter.field: "CreatedDate"
+    transforms.TimestampConverter.format: "YYYY-MM-DD hh:mm:ss"
+    transforms.TimestampConverter.target.type: "string"	
+    #-----------------------------------------------------------------------------------------------	
+    database.history.kafka.bootstrap.servers: "kafka-cluster-prd-kafka-external-bootstrap:9094"
+    database.history.producer.security.protocol: "SASL_PLAINTEXT"
+    database.history.producer.sasl.mechanism: "SCRAM-SHA-512"
+    database.history.producer.sasl.jaas.config: "org.apache.kafka.common.security.scram.ScramLoginModule required username=\"connector-user\" password=\"pY55KzNDfyx3\";"
+    database.history.consumer.security.protocol: "SASL_PLAINTEXT"
+    database.history.consumer.sasl.mechanism: "SCRAM-SHA-512"
+    database.history.consumer.sasl.jaas.config: "org.apache.kafka.common.security.scram.ScramLoginModule required username=\"connector-user\" password=\"pY55KzNDfyx3\";"
