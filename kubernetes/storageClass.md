@@ -4,7 +4,7 @@ A StorageClass provides a way for administrators to describe the "classes" of st
 
 Storage class คือวิธีที่ใช้ในการจัดการกับ storage คล้ายกับ role ของ user. class แต่ละ class จะมีเงื่อนไขที่ไม่เหมือนกัน วิธีนี้ถูกใช้เพื่อให้ง่ายต่อการจัดการและกำหนด policy ของ storage
 
-Storage class จะประกอบด้วย `provisioner`, `parameters` และ `reclaimPolicy` ซึ่งจะถูกใช้เมื่อ PersistentVolume ที่เป็นของคลาสนั้นๆ จำเป็นต้องได้รับการจัดสรรแบบไดนามิก
+Storage class จะประกอบด้วย `provisioner`, `parameters` และ `reclaimPolicy` ซึ่งจะถูกใช้เมื่อ PersistentVolume ที่เป็นของคลาสนั้นๆ จะรับการจัดสรรแบบไดนามิก
 
 ## AWS
 ```yaml
