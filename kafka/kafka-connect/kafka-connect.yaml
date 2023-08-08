@@ -1,0 +1,45 @@
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaConnect
+metadata:
+  name: kafka-connect-poc
+  annotations:
+    strimzi.io/use-connector-resources: "true"
+spec:
+  replicas: 3
+  authentication:
+    type: scram-sha-512
+    username: connect-user
+    passwordSecret:
+      secretName: sc-connect-user
+      password: password
+  bootstrapServers: 10.111.0.28:9094 # here ip
+  config:
+    config.storage.replication.factor: 3
+    offset.storage.replication.factor: 3
+    status.storage.replication.factor: 3
+    config.providers: file
+    config.providers.file.class: org.apache.kafka.common.config.provider.FileConfigProvider
+  build:
+    output:
+      type: docker
+      image: registry.gitlab.com/samaels/kafka-poc-project/strimzi-sqlconnect # here registry
+      pushSecret: secret-docker
+    plugins:
+      - name: debezium-sqlserver-connector
+        artifacts:
+          - type: tgz
+            url: https://repo1.maven.org/maven2/io/debezium/debezium-connector-sqlserver/1.7.0.Final/debezium-connector-sqlserver-1.7.0.Final-plugin.tar.gz
+  template:
+    pod:
+      imagePullSecrets:
+      - name: secret-docker
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - podAffinityTerm:
+              labelSelector:
+                matchLabels:
+                  strimzi.io/cluster: kafka-connect-poc # here
+                  strimzi.io/name: kafka-connect-poc-connect # here
+              topologyKey: kubernetes.io/hostname
+            weight: 100
