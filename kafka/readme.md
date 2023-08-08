@@ -36,7 +36,7 @@ Kafka installation manual
 
     wait until pod stimzi-cluster-operator is complete
 
-    config ip loadbalancer and storage class in kafka-cluster/kafka-cluster.yaml
+    config ip loadbalancer and storage class in `kafka-cluster/kafka-cluster.yaml`
 
     ```yaml
     bootstrap:
