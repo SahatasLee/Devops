@@ -1,87 +1,68 @@
 # Create User Kafka
+```Yaml
+## KAFKAUSER-ADMPPEX ## 
+--- 
+apiVersion: kafka.strimzi.io/v1beta2 
+kind: KafkaUser 
+metadata: 
+  name: admppex 
+  labels: 
+    strimzi.io/cluster: kafka-cluster-poc 
+spec: 
+  authentication: 
+    type: scram-sha-512 
+  authorization: 
+    type: simple 
+    acls: 
+      # access to kafka topic [Write] 
+      - resource: 
+          type: topic 
+          name: eaadmin 
+          patternType: literal 
+        operation: All 
+        host: "*" 
+      # access to kafka group [All] 
+      - resource: 
+          type: group 
+          name: group-eaadmin 
+          patternType: literal 
+        operation: All 
+        host: "*" 
+```
 
-    ## KAFKAUSER-ADMPPEX ## 
+1. Apply
 
-    --- 
-
-    apiVersion: kafka.strimzi.io/v1beta2 
-
-    kind: KafkaUser 
-
-    metadata: 
-
-      name: admppex 
-
-      labels: 
-
-        strimzi.io/cluster: kafka-cluster-poc 
-
-    spec: 
-
-      authentication: 
-
-        type: scram-sha-512 
-
-      authorization: 
-
-        type: simple 
-
-        acls: 
-
-          # access to kafka topic [Write] 
-
-          - resource: 
-
-              type: topic 
-
-              name: eaadmin 
-
-              patternType: literal 
-
-            operation: All 
-
-            host: "*" 
-
-          # access to kafka group [All] 
-
-          - resource: 
-
-              type: group 
-
-              name: group-eaadmin 
-
-              patternType: literal 
-
-            operation: All 
-
-            host: "*" 
-
-apply
-
+    ```Bash
     kubectl apply -f (your file) -n kafka 
+    ```
 
-output
+    output
 
+    ```Bash
     kafkauser.kafka.strimzi.io/test-user created
+    ```
 
-Check
+2. Check
 
+    ```Bash
     kubectl get ku <your user> –n kafka
+    ```
 
-Get kafka password
+3. Get kafka password
 
-Create **get-kafka-user-password.sh**
+    Create `get-kafka-user-password.sh`
 
+    ```Bash
     #!/bin/bash 
-
     echo "Please input Kafka User" 
-
     read kafka_user 
-
     kubectl get secret $kafka_user -n kafka --template={{.data}} | cut -d ":" -f 3 | base64 -d
+    ```
 
-get password
+    run script
 
+    ```Bash
     bash get-kafka-user-password.sh 
+    ```
 
-save password to txt file and lock
+    save password to txt file, zip and lock
