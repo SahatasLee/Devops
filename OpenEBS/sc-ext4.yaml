@@ -1,0 +1,12 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: openebs-ext4
+allowVolumeExpansion: true
+parameters:
+  volblocksize: "4k"
+  compression: "off"
+  dedup: "off"
+  fstype: "ext4"
+  poolname: "zfspv-pool"
+provisioner: zfs.csi.openebs.io
