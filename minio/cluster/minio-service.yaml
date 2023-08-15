@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"operator.min.io/authors":"MinIO, Inc.","operator.min.io/license":"AGPLv3","operator.min.io/support":"https://subnet.min.io"},"labels":{"app.kubernetes.io/instance":"minio-operator","app.kubernetes.io/name":"operator","name":"console"},"name":"console","namespace":"minio-operator"},"spec":{"ports":[{"name":"http","port":9090},{"name":"https","port":9443}],"selector":{"app":"console"}}}
+    operator.min.io/authors: MinIO, Inc.
+    operator.min.io/license: AGPLv3
+    operator.min.io/support: https://subnet.min.io
+  creationTimestamp: "2023-08-15T03:20:37Z"
+  labels:
+    app.kubernetes.io/instance: minio-operator
+    app.kubernetes.io/name: operator
+    name: console
+  name: console
+  namespace: minio-operator
+  resourceVersion: "22216403"
+  uid: 86b1c0be-1dcc-4e19-9c03-55087c97faf5
+spec:
+  clusterIP: 10.233.10.24
+  clusterIPs:
+  - 10.233.10.24
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: http
+    port: 9090
+    protocol: TCP
+    targetPort: 9090
+  - name: https
+    port: 9443
+    protocol: TCP
+    targetPort: 9443
+  selector:
+    app: console
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer: {}
