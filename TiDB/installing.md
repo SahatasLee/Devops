@@ -52,23 +52,32 @@ This section describes how to install TiDB Operator using Helm 3.
 
 1. Add the PingCAP repository:
 
-        helm repo add pingcap https://charts.pingcap.org/
+    ```Bash
+    helm repo add pingcap https://charts.pingcap.org/
+    ```
 
     • Expected output
 
-        "pingcap" has been added to your repositories
+    ```Bash
+    "pingcap" has been added to your repositories
+    ```
 
     • Create a namespace for TiDB Operator:
 
-        kubectl create namespace tidb-operator
+    ```Bash
+    kubectl create namespace tidb-operator
+    ```
 
     • Expected output
 
-        namespace/tidb-operator created
+    ```Bash
+    namespace/tidb-operator created
+    ```
 
     create file **tidb-operator-values.yaml**
 
-        scheduler:
+    ```
+    scheduler:
         create: true
         # With rbac.create=false, the user is responsible for creating this account
         # With rbac.create=true, this service account will be created
@@ -85,37 +94,43 @@ This section describes how to install TiDB Operator using Helm 3.
             cpu: 80m
             memory: 50Mi
         kubeSchedulerImageName: registry.k8s.io/kube-scheduler
+    ```
 
     • Install TiDB Operator
 
-        helm install --namespace tidb-operator tidb-operator pingcap/tidb-operator --version v1.3.9 -f tidb-operator-values.yaml
+    ```Bash
+    helm install --namespace tidb-operator tidb-operator pingcap/tidb-operator --version v1.3.9 -f tidb-operator-values.yaml
+    ```
 
     • Expected output
 
-        NAME: tidb-operator
-        LAST DEPLOYED: Wed Jun 21 12:12:19 2023
-        NAMESPACE: tidb-operator
-        STATUS: deployed
-        REVISION: 1
-        TEST SUITE: None
-        NOTES:
-        Make sure tidb-operator components are running:
+    ```Bash
+    NAME: tidb-operator
+      LAST DEPLOYED: Wed Jun 21 12:12:19 2023
+      NAMESPACE: tidb-operator
+      STATUS: deployed
+      REVISION: 1
+      TEST SUITE: None
+      NOTES:
+      Make sure tidb-operator components are running:
 
-            kubectl get pods --namespace tidb-operator -l app.kubernetes.io/instance=tidb-operator
-
+          kubectl get pods --namespace tidb-operator -l app.kubernetes.io/instance=tidb-operator
+    ```
 2. To confirm that the TiDB Operator components are running, run the following command:
 
-        kubectl get pods --namespace tidb-operator -l app.kubernetes.io/instance=tidb-operator
+    ```Bash
+    kubectl get pods --namespace tidb-operator -l app.kubernetes.io/instance=tidb-operator
+    ```
 
     • Expected output
 
-        NAME                                       READY   STATUS    RESTARTS   AGE
+    ```Bash
+    NAME                                       READY   STATUS    RESTARTS   AGE
         tidb-controller-manager-7fb56cccb7-rm8dz   1/1     Running   0          10s
         tidb-scheduler-6b5cc4bd-kr2q4              2/2     Running   0          10s
+    ```
 
     As soon as all Pods are in the "Running" state, proceed to the next step.
-
----
 
 ### Install TiDB cluster
 
@@ -127,27 +142,39 @@ This section describes how to deploy a TiDB cluster and its monitoring services.
 
 #### Deploy a TiDB cluster
 
-    kubectl create namespace tidb-cluster
+  ```Bash
+  kubectl create namespace tidb-cluster
+  ```
 
 • Expected output
 
-    namespace/tidb-cluster created
+  ```Bash
+  namespace/tidb-cluster created
+  ```
 
 • Install TiDB-cluster
 
-    kubectl -n tidb-cluster apply -f tidb-cluster.yaml
+  ```Bash
+  kubectl -n tidb-cluster apply -f tidb-cluster.yaml
+  ```
 
 • Expected output
 
-    tidbcluster.pingcap.com/basic created
+  ```Bash
+  tidbcluster.pingcap.com/basic created
+  ```
 
 • Watch Pod
 
-    watch kubectl -n tidb-cluster get po
+  ```Bash
+  watch kubectl -n tidb-cluster get po
+  ```
 
 • Get Logs
 
-    kubectl logs -n tidb-cluster basic-tiflash-0 -c tiflash
+  ```Bash
+  kubectl logs -n tidb-cluster basic-tiflash-0 -c tiflash
+  ```
 
 > Note : see tidb-cluster.yaml file (edit storageclassname and size of TIKV & PD)
 >
@@ -155,7 +182,8 @@ This section describes how to deploy a TiDB cluster and its monitoring services.
 
 The **tidb-cluster.yaml** file:
 
-    apiVersion: pingcap.com/v1alpha1
+  ```Yaml
+  apiVersion: pingcap.com/v1alpha1
     kind: TidbCluster
     metadata:
         name: basic
@@ -262,16 +290,18 @@ The **tidb-cluster.yaml** file:
                 storage: 5Gi
         storageClassName: local-path #please change to match sc name
         config: {}
-
----
+  ```
 
 ### Deploy TiDB monitoring services
 
-    kubectl -n tidb-cluster apply -f tidb-monitoring.yaml
+  ```Bash
+  kubectl -n tidb-cluster apply -f tidb-monitoring.yaml
+  ```
 
 The **tidb-monitoring.yaml** file:
 
-    apiVersion: pingcap.com/v1alpha1
+  ```Yaml
+  apiVersion: pingcap.com/v1alpha1
     kind: TidbMonitor
     metadata:
     name: basic
@@ -296,41 +326,52 @@ The **tidb-monitoring.yaml** file:
         baseImage: quay.io/prometheus-operator/prometheus-config-reloader
         version: v0.49.0
     imagePullPolicy: IfNotPresent
+  ```
 
 ---
 
 ### TiDB Dashboard
 
-    kubectl apply -n tidb-cluster -f tidbngmonitoring.yaml
+  ```Bash
+  kubectl apply -n tidb-cluster -f tidbngmonitoring.yaml
+  ```
 
 The **tidbngmonitoring.yaml** file:
 
-    apiVersion: pingcap.com/v1alpha1
-    kind: TidbNGMonitoring
-    metadata:
-    name: basic
-    spec:
-    clusters:
-    - name: basic
-        namespace: tidb-cluster
-    ngMonitoring:
-        requests:
-        storage: 1Gi
-        version: v6.1.0
-        # storageClassName: default
-        baseImage: pingcap/ng-monitoring
+  ```Yaml
+  apiVersion: pingcap.com/v1alpha1
+  kind: TidbNGMonitoring
+  metadata:
+  name: basic
+  spec:
+  clusters:
+  - name: basic
+      namespace: tidb-cluster
+  ngMonitoring:
+      requests:
+      storage: 1Gi
+      version: v6.1.0
+      # storageClassName: default
+      baseImage: pingcap/ng-monitoring
+  ```
 
 > (NOT USE above)
 
-        kubectl -n tidb-cluster apply -f https://raw.githubusercontent.com/pingcap/tidb-operator/master/examples/basic/tidb-monitor.yaml
+```Bash
+kubectl -n tidb-cluster apply -f https://raw.githubusercontent.com/pingcap/tidb-operator/master/examples/basic/tidb-monitor.yaml
+```
 
 Expected output
 
-    http://lbip:2379/dashboard Login with root
+```Bash
+http://lbip:2379/dashboard Login with root
+```
 
 View the Pod status
 
-    watch kubectl get po -n tidb-cluster
+```Bash
+watch kubectl get po -n tidb-cluster
+```
 
 Expected output
 
@@ -345,4 +386,6 @@ From <https://docs.pingcap.com/tidb-in-kubernetes/dev/get-started#step-2-deploy-
 
 ## Connecting Dashboard
 
-        10.xxx.xxx.xxx:2379/dashboard
+```Bash
+10.xxx.xxx.xxx:2379/dashboard
+```
