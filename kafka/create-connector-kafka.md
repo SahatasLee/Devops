@@ -12,7 +12,7 @@
 
     folder name example: **31-JUL**
 
-5. create folder
+5. Create folder
 
     folder name example: **"1-connector-otc-omhas-omsap-omhas-domainproduct"**
 
