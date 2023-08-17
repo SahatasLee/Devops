@@ -1,12 +1,20 @@
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: openebs-ext4
+  name: zpool-ext4
 allowVolumeExpansion: true
 parameters:
   volblocksize: "4k"
   compression: "off"
   dedup: "off"
   fstype: "ext4"
-  poolname: "zfspv-pool"
+  poolname: "z-pool"
 provisioner: zfs.csi.openebs.io
+allowedTopologies:
+- matchLabelExpressions:
+  - key: openebs.io/nodeid
+    values:
+    - node1
+    - node2
+    - node3
+volumeBindingMode: WaitForFirstConsumer
