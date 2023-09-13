@@ -2,7 +2,9 @@
 
 ## Preparing kubernetes
 
+    ```bash
     kubectl edit configmap -n kube-system kube-proxy
+    ```
     #Then set​
     strictARP: true​
 
