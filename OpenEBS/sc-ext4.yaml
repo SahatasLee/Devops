@@ -10,11 +10,11 @@ parameters:
   fstype: "ext4"
   poolname: "z-pool"
 provisioner: zfs.csi.openebs.io
-allowedTopologies:
-- matchLabelExpressions:
-  - key: openebs.io/nodeid
-    values:
-    - node1
-    - node2
-    - node3
+# allowedTopologies:
+# - matchLabelExpressions:
+#   - key: openebs.io/nodeid
+#     values:
+#     - node1
+#     - node2
+#     - node3
 volumeBindingMode: WaitForFirstConsumer
