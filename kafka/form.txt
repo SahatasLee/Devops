@@ -1,0 +1,57 @@
+---------------------------------------------------------
+					  User Access Topic Consume And Produce
+---------------------------------------------------------
+user owner: otc
+1. user name: otcsale
+
+-- topic consumer
+access to resource: [
+    topic: [
+		otc-otcsale-edi
+    ] ,
+    operations: [Read, Write]
+]
+
+-- access consumer group
+access to resource: [
+    group: [
+       	otc-otcsale
+    ] ,
+    operations: [Create, Read, Write]
+]
+
+---------------------------------------------------------
+					  User Access Topic Consume Only
+---------------------------------------------------------
+user owner: otc
+1. user name: otcsale
+
+-- topic consumer
+access to resource: [
+    topic: [
+		otc-otcsale-edi
+    ] ,
+    operations: [Read]
+]
+
+-- access consumer group
+access to resource: [
+    group: [
+       	otc-otcsale
+    ] ,
+    operations: [Create, Read, Write]
+]
+
+---------------------------------------------------------
+					  create topic
+---------------------------------------------------------
+user owner: otc
+2. user name: otcsale
+
+topic name: otc-otcsale-edi
+   no. of partition: 3
+   no. of replica: 3
+   topic configurations
+   - cleanup.policy: compact
+   - retention.ms: 7 day
+   - retention.bytes: #optional

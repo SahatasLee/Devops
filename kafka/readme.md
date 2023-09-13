@@ -2,10 +2,12 @@
 
 Kafka installation manual
 
+https://strimzi.io/
+
 ## Requirement
 
 - kubernetes cluster
-- nfs server
+- storage class
 
 ## Installation
 
@@ -17,7 +19,7 @@ Kafka installation manual
 
     install strimzi
 
-        helm repo add strimzi <https://strimzi.io/charts/>
+        helm repo add strimzi https://strimzi.io/charts/
         helm repo update
 
     install kafka-cluster-operator defualt is lastest version
@@ -51,6 +53,22 @@ Kafka installation manual
     ```
 
     and storage class line 68, 108 change to your pvc
+
+    [kafka-cluster-poc](kafka-cluster/kafka-cluster-poc.yml)
+
+    ```Bash
+    # apply kafka-cluster folder
+    kubectl -n kafka apply kafka-cluster/
+    ```
+
+    Output
+
+    ```Bash
+    root@node1:~# kubectl -n kafka apply -f kafka/kafka-cluster/
+    kafka.kafka.strimzi.io/kafka-cluster-poc created
+    configmap/kafka-metrics created
+    configmap/zookeeper-metrics created
+    ```
 
 2. Create kafdrop-user
 
@@ -106,8 +124,7 @@ Kafka installation manual
     security.protocol=SASL_PLAINTEXT
     sasl.mechanism=SCRAM-SHA-512 
     sasl.jaas.config=org.apache.kafka.common.security.scram.ScramLoginModule required 
-    username="kafdrop-user"
-    password="Vpi8KF5pMxeu"; 
+    username="kafdrop-user" password="Vpi8KF5pMxeu"; 
     #change password to yr own password and user
     ```
 
@@ -119,13 +136,53 @@ Kafka installation manual
 
     6. run docker
 
+    change `KAFKA_BROKERCONNECT=10.111.0.128:9094` to your boostrap ip
+
     ```Bash
     docker run -d --rm -p 9039:9000 \
-        -e KAFKA_BROKERCONNECT=10.111.0.128:9094 \
+        -e KAFKA_BROKERCONNECT=10.111.0.118:9094 \
         -e KAFKA_PROPERTIES="$(cat kafkapoc.properties | base64)" \
         -e JVM_OPTS="-Xms32M -Xmx64M" \
         -e SERVER_SERVLET_CONTEXTPATH="/" \
         -e CMD_ARGS="--topic.deleteEnabled=false --topic.createEnabled=false" \
         -v /etc/localtime:/etc/localtime:ro \
         obsidiandynamics/kafdrop
+    ```
+
+## Upgrade Kafka using 
+
+1. Helm upgrade strimzi-operator
+
+    ```bash
+    helm upgrade kafka-cluster strimzi/strimzi-kafka-operator --namespace kafka
+    ```
+
+2. Change version kafka cluster 
+
+    `version`
+
+    ```yaml
+    apiVersion: kafka.strimzi.io/v1beta2
+    kind: Kafka
+    metadata:
+        name: kafka-cluster-poc
+    spec:
+        kafka:
+            version: 3.4.0 
+            logging:
+                type: inline
+    ```
+
+    `log.message.format.version: "2.8"`
+    `inter.broker.protocol.version: "2.8"`
+
+    ```yaml
+    config:
+      default.replication.factor: 3
+      min.insync.replicas: 3
+      offsets.topic.replication.factor: 3
+      transaction.state.log.replication.factor: 3
+      transaction.state.log.min.isr: 2
+      log.message.format.version: "2.8"
+      inter.broker.protocol.version: "2.8"
     ```

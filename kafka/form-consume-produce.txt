@@ -1,0 +1,21 @@
+---------------------------------------------------------
+					  User Access Topic Consume And Produce
+---------------------------------------------------------
+user owner: otc
+1. user name: otcsale
+
+-- topic consumer
+access to resource: [
+    topic: [
+		otc-otcsale-edi
+    ] ,
+    operations: [Read, Write]
+]
+
+-- access consumer group
+access to resource: [
+    group: [
+       	otc-otcsale
+    ] ,
+    operations: [Create, Read, Write]
+]
