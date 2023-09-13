@@ -41,4 +41,5 @@
         kubectl get secret elasticsearch-es-elastic-user -o=jsonpath='{.data.elastic}' | base64 --decode; echo
 
     User : elastic
+    
     Pass : from secret above
