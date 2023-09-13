@@ -15,20 +15,28 @@ https://strimzi.io/
 
     create kafka namespace
 
-        kubectl create ns kafka
+    ```bash
+    kubectl create ns kafka
+    ```
 
     install strimzi
 
-        helm repo add strimzi https://strimzi.io/charts/
-        helm repo update
+    ```bash
+    helm repo add strimzi https://strimzi.io/charts/
+    helm repo update
+    ```
 
     install kafka-cluster-operator defualt is lastest version
 
-        helm install kafka-cluster strimzi/strimzi-kafka-operator --namespace kafka
+    ```bash
+    helm install kafka-cluster strimzi/strimzi-kafka-operator --namespace kafka
+    ```
 
     can specify version by this command
 
-        helm install kafka-cluster strimzi/strimzi-kafka-operator --version 0.26.0 --namespace kafka
+    ```bash
+    helm install kafka-cluster strimzi/strimzi-kafka-operator --version 0.26.0 --namespace kafka
+    ```
 
     Scale replicas
 
@@ -70,9 +78,9 @@ https://strimzi.io/
     configmap/zookeeper-metrics created
     ```
 
-2. Create kafdrop-user
+## Create kafdrop-user (admin) && Docker Kafdrop
 
-    1. prepare file `kafdrop-user.yaml`
+1. prepare file `kafdrop-user.yaml`
 
     ```yaml
     apiVersion: kafka.strimzi.io/v1beta1
@@ -106,19 +114,19 @@ https://strimzi.io/
             type: transactionalId
     ```
 
-    2. create user
+2. create user
 
     ```Bash
     kubectl -n kafka apply -f kafdrop-user.yaml
     ```
 
-    3. get password [get-kafka-user-password.sh](get-kafka-user-pasword.sh)
+3. get password [get-kafka-user-password.sh](get-kafka-user-pasword.sh)
 
     ```Bash
     bash get-kafka-user-pasword.sh
     ```
 
-    4. go to `anisible server` and create `kafkapoc.propoties` file
+4. go to `anisible server` and create `kafkapoc.propoties` file
 
     ```Bash
     security.protocol=SASL_PLAINTEXT
@@ -128,13 +136,13 @@ https://strimzi.io/
     #change password to yr own password and user
     ```
 
-    5. install docker
+5. install docker
 
     ```Bash
     apt install docker -y && apt install docker.io -y
     ```
 
-    6. run docker
+6. run docker
 
     change `KAFKA_BROKERCONNECT=10.111.0.128:9094` to your boostrap ip
 
@@ -174,6 +182,7 @@ https://strimzi.io/
     ```
 
     `log.message.format.version: "2.8"`
+    
     `inter.broker.protocol.version: "2.8"`
 
     ```yaml
