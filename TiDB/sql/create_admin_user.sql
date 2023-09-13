@@ -1,0 +1,23 @@
+CREATE USER '70000187'@'%' IDENTIFIED BY '1234';
+GRANT Usage ON *.* TO '70000187'@'%';
+GRANT Create user ON *.* TO '70000187'@'%';
+-- OPTION GRAND
+GRANT Alter ON RPT_Logistics_OR_DEV.* TO '70000187'@'%';
+GRANT Create ON RPT_Logistics_OR_DEV.* TO '70000187'@'%';
+GRANT Create view ON RPT_Logistics_OR_DEV.* TO '70000187'@'%';
+GRANT Delete ON RPT_Logistics_OR_DEV.* TO '70000187'@'%';
+GRANT Drop ON RPT_Logistics_OR_DEV.* TO '70000187'@'%';
+GRANT Grant option ON RPT_Logistics_OR_DEV.* TO '70000187'@'%';
+GRANT Index ON RPT_Logistics_OR_DEV.* TO '70000187'@'%';
+GRANT Insert ON RPT_Logistics_OR_DEV.* TO '70000187'@'%';
+GRANT References ON RPT_Logistics_OR_DEV.* TO '70000187'@'%';
+GRANT Select ON RPT_Logistics_OR_DEV.* TO '70000187'@'%';
+GRANT Show view ON RPT_Logistics_OR_DEV.* TO '70000187'@'%';
+GRANT Trigger ON RPT_Logistics_OR_DEV.* TO '70000187'@'%';
+GRANT Update ON RPT_Logistics_OR_DEV.* TO '70000187'@'%';
+GRANT Alter routine ON RPT_Logistics_OR_DEV.* TO '70000187'@'%';
+GRANT Create routine ON RPT_Logistics_OR_DEV.* TO '70000187'@'%';
+GRANT Create temporary tables ON RPT_Logistics_OR_DEV.* TO '70000187'@'%';
+GRANT Execute ON RPT_Logistics_OR_DEV.* TO '70000187'@'%';
+GRANT Lock tables ON RPT_Logistics_OR_DEV.* TO '70000187'@'%';
+GRANT Grant option ON RPT_Logistics_OR_DEV.* TO '70000187'@'%';

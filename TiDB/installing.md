@@ -355,23 +355,15 @@ The **tidbngmonitoring.yaml** file:
       baseImage: pingcap/ng-monitoring
   ```
 
-> (NOT USE above)
-
-```Bash
+<!-- ```Bash
 kubectl -n tidb-cluster apply -f https://raw.githubusercontent.com/pingcap/tidb-operator/master/examples/basic/tidb-monitor.yaml
-```
+``` -->
 
-Expected output
+  View the Pod status
 
-```Bash
-http://lbip:2379/dashboard Login with root
-```
-
-View the Pod status
-
-```Bash
-watch kubectl get po -n tidb-cluster
-```
+  ```Bash
+  watch kubectl get po -n tidb-cluster
+  ```
 
 Expected output
 
@@ -386,6 +378,6 @@ From <https://docs.pingcap.com/tidb-in-kubernetes/dev/get-started#step-2-deploy-
 
 ## Connecting Dashboard
 
-```Bash
+```Console
 10.xxx.xxx.xxx:2379/dashboard
 ```
