@@ -4,7 +4,15 @@
 
 ## Command
 
-### Copy ALll
+### Copy All
+
+To copy all text in Vim, you can use the following command:
+
+1. Press `Esc` to make sure you are in normal mode.
+2. `gg`
+3. `v`
+4. `G`
+5. `y`
 
 ### Delete All
 
