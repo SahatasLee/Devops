@@ -2,8 +2,12 @@
 
 Find bash path
 
-    which bash
+```shell
+which bash
+```
 
 Output
 
-    /usr/bin/bash
+```shell
+/usr/bin/bash
+```
