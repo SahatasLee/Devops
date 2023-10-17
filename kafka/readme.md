@@ -4,6 +4,8 @@ Kafka installation manual
 
 https://strimzi.io/
 
+https://strimzi.io/blog/2018/11/01/using-helm/
+
 ## Requirement
 
 - kubernetes cluster
@@ -13,20 +15,20 @@ https://strimzi.io/
 
 1. Install kafka operator
 
-    create kafka namespace
+    1. create kafka namespace
 
     ```bash
     kubectl create ns kafka
     ```
 
-    install strimzi
+    2. install strimzi
 
     ```bash
     helm repo add strimzi https://strimzi.io/charts/
     helm repo update
     ```
 
-    install kafka-cluster-operator defualt is lastest version
+    3. install kafka-cluster-operator defualt is lastest version
 
     ```bash
     helm install kafka-cluster strimzi/strimzi-kafka-operator --namespace kafka
@@ -36,6 +38,24 @@ https://strimzi.io/
 
     ```bash
     helm install kafka-cluster strimzi/strimzi-kafka-operator --version 0.26.0 --namespace kafka
+    ```
+
+    Install 2 namespace
+
+    ```
+    helm install kafka-cluster strimzi/strimzi-kafka-operator \
+    --namespace kafka \
+    --set watchNamespaces="{kafka-nut}" \
+    --version 0.26.0 \
+    ```
+
+    Add a namepaces
+
+    ```
+    helm upgrade \
+    --reuse-values \
+    --set watchNamespaces="{kafka-nut}" \
+    kafka-cluster strimzi/strimzi-kafka-operator
     ```
 
     Scale replicas
@@ -148,7 +168,7 @@ https://strimzi.io/
 
     ```Bash
     docker run -d --rm -p 9039:9000 \
-        -e KAFKA_BROKERCONNECT=10.111.0.118:9094 \
+        -e KAFKA_BROKERCONNECT=10.1.0.1:9094 \
         -e KAFKA_PROPERTIES="$(cat kafkapoc.properties | base64)" \
         -e JVM_OPTS="-Xms32M -Xmx64M" \
         -e SERVER_SERVLET_CONTEXTPATH="/" \

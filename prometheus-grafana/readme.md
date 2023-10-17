@@ -2,6 +2,8 @@
 
 Install app
 
+Installed by [helm](\helm.md)
+
 ## Install prometheus
 
 https://www.cherryservers.com/blog/install-prometheus-ubuntu
@@ -27,5 +29,13 @@ cd node_exporter-*.*
 ## Install Grafana
 
 https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-grafana-on-ubuntu-22-04
+
+## Uninstall Grafana
+
+```bash
+systemctl stop grafana-server
+systemctl disable grafana-server
+apt unintall grafana-server
+```
 
 ## Create Dashboard Grafana

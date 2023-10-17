@@ -17,3 +17,7 @@ vi /etc/netplan/*.yaml
 ```bash
 ip a
 ```
+
+## Remove systemd services
+
+https://superuser.com/questions/513159/how-to-remove-systemd-services

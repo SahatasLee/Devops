@@ -1,7 +1,7 @@
 apiVersion: kafka.strimzi.io/v1beta2
 kind: Kafka
 metadata:
-  name: kafka-cluster-poc-2.8.0
+  name: kafka-cluster-poc
 spec:
   kafka:
     version: 2.8.0
@@ -79,7 +79,7 @@ spec:
             - podAffinityTerm:
                 labelSelector:
                   matchLabels:
-                    strimzi.io/cluster: kafka-cluster-poc-02
+                    strimzi.io/cluster: kafka-cluster-poc
                     strimzi.io/name: kafka-cluster-poc-kafka
                 topologyKey: kubernetes.io/hostname
               weight: 100
@@ -119,7 +119,7 @@ spec:
             - podAffinityTerm:
                 labelSelector:
                   matchLabels:
-                    strimzi.io/cluster: kafka-cluster-poc-02
+                    strimzi.io/cluster: kafka-cluster-poc
                     strimzi.io/name: kafka-cluster-zookeeper
                 topologyKey: kubernetes.io/hostname
               weight: 100

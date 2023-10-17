@@ -27,4 +27,5 @@ while IFS='' read -r connector || [[ -n "$connector" ]]; do
     echo '===> Connector has been restarted !!'
     echo "${url}status" | cut -d "," -f 2-6
     echo # Printing an empty line for clarity between connectors
-done < "$input_file"
+done < "$input_file" 
+echo "All connectors processed."
