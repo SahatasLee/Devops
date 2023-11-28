@@ -1,0 +1,12 @@
+$TTL    604800
+@       IN      SOA     ns.sahatas.com. admin.sahatas.com. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      ns.sahatas.com.
+@       IN      A       10.111.0.117
+ns      IN      A       10.111.0.117
+gitlab  IN      A       10.111.0.117

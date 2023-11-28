@@ -19,22 +19,47 @@ spec:
         image: nginx
         ports:
         - containerPort: 80
-        volumeMounts:
-        - name: www
-          mountPath: /usr/share/nginx/html
-      volumes:
-      - name: www
-        persistentVolumeClaim:
-          claimName: pvc-nginx
+        # volumeMounts:
+        # - name: www
+        #   mountPath: /usr/share/nginx/html
+      # volumes:
+      # - name: www
+      #   persistentVolumeClaim:
+      #     claimName: pvc-nginx
+      # affinity:
+      #   podAntiAffinity:
+      #     requiredDuringSchedulingIgnoredDuringExecution:
+      #     - labelSelector:
+      #         matchExpressions:
+      #         - key: "app"
+      #           operator: In
+      #           values:
+      #           - nginx
+      #       topologyKey: "kubernetes.io/hostname"
+# ---
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: pvc-nginx
+# spec:
+#   storageClassName: zpool-ext4
+#   accessModes:
+#   - ReadWriteOnce
+#   resources:
+#     requests:
+#       storage: 1Gi
 ---
 apiVersion: v1
-kind: PersistentVolumeClaim
+kind: Service
 metadata:
-  name: pvc-nginx
+  name: nginx-service
+  labels:
+    app: nginx
 spec:
-  storageClassName: local-path
-  accessModes:
-  - ReadWriteOnce
-  resources:
-    requests:
-      storage: 2Gi
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+  selector:
+    app: nginx

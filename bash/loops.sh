@@ -1,6 +1,6 @@
 # !/bin/bash
 
-input_file="file.txt"
+input_file="connectors.txt"
 
 # Check if file exists
 if [[ ! -f "$input_file" ]]; then
@@ -8,8 +8,10 @@ if [[ ! -f "$input_file" ]]; then
     exit 1
 fi
 
-while IFS='' read -r connector || [[ -n "$connector" ]]; do
-
+while IFS= read -r connector || [[ -n "$connector" ]]; do
+    connector=${connector//$'\r'/}
+    echo $connector
+    echo "start $connector end"
     url="http://localhost:8083/connectors/$connector/"
     echo "===> URL: $url"
     echo "===> Processing connector: $connector"
@@ -17,15 +19,15 @@ while IFS='' read -r connector || [[ -n "$connector" ]]; do
     echo "${url}pause"
     # sleep 3
     echo '===> Connector is restarting...'
-    echo ${url}"restart"
+    echo "$url""restart"
     # sleep 3
-    echo "${url}tasks/0/restart"
+    echo "$url""tasks/0/restart"
     # sleep 3
     echo '===> Connector is resuming...'
-    echo "${url}resume"
+    echo "$url""resume"
     # sleep 10
     echo '===> Connector has been restarted !!'
-    echo "${url}status" | cut -d "," -f 2-6
-    echo # Printing an empty line for clarity between connectors
+    echo "$url""status" | cut -d "," -f 2-6
+    echo
 done < "$input_file" 
 echo "All connectors processed."

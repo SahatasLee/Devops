@@ -1,0 +1,196 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    checksum/configmap: 3450f61b8f4fb586b865fcffa4cf50045467d4f76382927ee827372a8926a785
+    checksum/secrets: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+    cni.projectcalico.org/containerID: da08fe4067df653ba4b7f5176da1bdcf7f8ca01dc8ecc00305e2de5efa400cb4
+    cni.projectcalico.org/podIP: 10.233.92.60/32
+    cni.projectcalico.org/podIPs: 10.233.92.60/32
+    gitlab.com/prometheus_port: "9252"
+    gitlab.com/prometheus_scrape: "true"
+  creationTimestamp: "2023-10-24T03:44:14Z"
+  generateName: gitlab-gitlab-runner-587cc876c9-
+  labels:
+    app: gitlab-gitlab-runner
+    chart: gitlab-runner-0.57.1
+    heritage: Helm
+    pod-template-hash: 587cc876c9
+    release: gitlab
+  name: gitlab-gitlab-runner-587cc876c9-pbrw6
+  namespace: default
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: gitlab-gitlab-runner-587cc876c9
+    uid: 103a59c0-6cfc-4b57-8bbf-5b6614ee3f48
+  resourceVersion: "1296340"
+  uid: 7cd4bbde-ab40-4470-8fe6-bfc6a1153da0
+spec:
+  containers:
+  - command:
+    - /usr/bin/dumb-init
+    - --
+    - /bin/bash
+    - /configmaps/entrypoint
+    env:
+    - name: CI_SERVER_URL
+      value: https://gitlab.khaolakonline.com/
+    - name: RUNNER_EXECUTOR
+      value: kubernetes
+    - name: REGISTER_LOCKED
+      value: "false"
+    - name: RUNNER_TAG_LIST
+    - name: KUBERNETES_NAMESPACE
+      value: default
+    image: registry.gitlab.com/gitlab-org/gitlab-runner:alpine-v16.4.1
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      exec:
+        command:
+        - /bin/bash
+        - /configmaps/check-live
+      failureThreshold: 3
+      initialDelaySeconds: 60
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: gitlab-gitlab-runner
+    ports:
+    - containerPort: 9252
+      name: metrics
+      protocol: TCP
+    readinessProbe:
+      exec:
+        command:
+        - /usr/bin/pgrep
+        - gitlab.*runner
+      failureThreshold: 3
+      initialDelaySeconds: 10
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources: {}
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      privileged: false
+      readOnlyRootFilesystem: false
+      runAsNonRoot: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /secrets
+      name: projected-secrets
+    - mountPath: /home/gitlab-runner/.gitlab-runner
+      name: etc-gitlab-runner
+    - mountPath: /configmaps
+      name: configmaps
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-2dsw7
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: node3
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 65533
+    runAsUser: 100
+  serviceAccount: gitlab-gitlab-runner
+  serviceAccountName: gitlab-gitlab-runner
+  terminationGracePeriodSeconds: 3600
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - emptyDir:
+      medium: Memory
+    name: runner-secrets
+  - emptyDir:
+      medium: Memory
+    name: etc-gitlab-runner
+  - name: projected-secrets
+    projected:
+      defaultMode: 420
+      sources:
+      - secret:
+          name: gitlab-minio-secret
+      - secret:
+          items:
+          - key: runner-registration-token
+            path: runner-registration-token
+          - key: runner-token
+            path: runner-token
+          name: gitlab-gitlab-runner-secret
+  - configMap:
+      defaultMode: 420
+      name: gitlab-gitlab-runner
+    name: configmaps
+  - name: kube-api-access-2dsw7
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-10-24T03:44:14Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-10-24T03:44:34Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-10-24T03:44:34Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-10-24T03:44:14Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://872c9f56298783d5da4260d2c9a2869dcca0f395474f007e95d368fd64fd98ab
+    image: registry.gitlab.com/gitlab-org/gitlab-runner:alpine-v16.4.1
+    imageID: registry.gitlab.com/gitlab-org/gitlab-runner@sha256:59fb464e4ae042ac7bbcb768f05e63ba682583a79ccd8fdfdf2a8322c0612a47
+    lastState: {}
+    name: gitlab-gitlab-runner
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-10-24T03:44:15Z"
+  hostIP: 10.111.0.115
+  phase: Running
+  podIP: 10.233.92.60
+  podIPs:
+  - ip: 10.233.92.60
+  qosClass: BestEffort
+  startTime: "2023-10-24T03:44:14Z"

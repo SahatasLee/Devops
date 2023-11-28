@@ -2,7 +2,7 @@
 
 /.kube/config
 
-## Download kubectl
+## Install kubectl
 
 https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
 
@@ -29,4 +29,23 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```bash
 kubectl version --client
 kubectl version --client --output=yaml
+```
+
+## Uninstall
+
+1. Remove kubectl
+
+```bash
+sudo rm -f /usr/local/bin/kubectl
+```
+
+2. Remove file
+
+```bash
+rm -rf ~/.kube/
+```
+
+```bash
+sudo rm -f /usr/local/bin/kubectl
+rm -rf ~/.kube/
 ```

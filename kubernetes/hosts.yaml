@@ -1,15 +1,15 @@
 all:
   hosts:
     node1:
-      ansible_host: 10.111.0.113
+      ansible_host: node1
       ip: 10.111.0.113
       access_ip: 10.111.0.113
     node2:
-      ansible_host: 10.111.0.114
+      ansible_host: node2
       ip: 10.111.0.114
       access_ip: 10.111.0.114
     node3:
-      ansible_host: 10.111.0.115
+      ansible_host: node3
       ip: 10.111.0.115
       access_ip: 10.111.0.115
   children:

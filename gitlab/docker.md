@@ -59,6 +59,7 @@ http://10.111.0.116:80
 docker run -d --name gitlab-runner --restart always \
   -v /srv/gitlab-runner/config:/etc/gitlab-runner \
   -v /var/run/docker.sock:/var/run/docker.sock \
+  --dns=10.111.0.112 \
   gitlab/gitlab-runner:latest
 ```
 
@@ -68,7 +69,7 @@ register Gitlab runner:
 docker exec -it gitlab-runner gitlab-runner register
 ```
 
-url: `http://10.111.0.116:8080`
+url: `http://10.111.0.117:8080`
 
 token: project > setting > cicd > runners > project runners
 

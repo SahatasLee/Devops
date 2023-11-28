@@ -6,6 +6,8 @@
 helm install psql bitnami/postgresql --namespace psql --create-namespace --set global.storageClass=nfs-client
 ```
 
+Output:
+
 ```bash
 root@node1:~# helm install psql bitnami/postgresql --namespace psql --create-namespace --set global.storageClass=nfs-client --version 12.0.0
 NAME: psql
