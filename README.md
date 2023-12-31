@@ -2,8 +2,8 @@
 
 - [Docker](Docker/Readme.md)
 - [Jenkins](Jenkins/readme.md)
-- [Kuberbetes](kubernetes)
-- kafka
-- minio
+- [Kuberbetes](kubernetes\readme.md)
+- [Kafka]()
+- Minio
 - TiDB
-- ELK
+- Elastic
