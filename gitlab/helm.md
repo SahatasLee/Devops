@@ -273,6 +273,7 @@ chose not to enable this by default. See https://docs.gitlab.com/runner/install/
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | https	| Boolean	| true	| If set to true, you will need to ensure the NGINX chart has access to the certificates. In cases where you have TLS-termination in front of your Ingresses, you probably want to look at global.ingress.tls.enabled. Set to false for external URLs to use http:// instead of https. |
+| tls.enabled	| Boolean	| true | When set to false, this disables TLS in GitLab. This is useful for cases in which you cannot use TLS termination of Ingresses, such as when you have a TLS-terminating proxy before the Ingress Controller. If you want to disable https completely, this should be set to false together with global.hosts.https
 
 ```yml
 # values.yaml

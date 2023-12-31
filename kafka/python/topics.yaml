@@ -1,0 +1,30 @@
+
+---
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaTopic
+metadata:
+  name: otc-sit-saleorgmaster-init-preprod
+  labels:
+    strimzi.io/cluster: kafka-cluster-dev
+spec:
+  partitions: 3
+  replicas: 3
+  config:
+    retention.ms: 604800000
+    cleanup.policy: compact,delete
+    compression.type: zstd
+
+---
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaTopic
+metadata:
+  name: otc-sit-mastermaterialcategory-preprod
+  labels:
+    strimzi.io/cluster: kafka-cluster-dev
+spec:
+  partitions: 3
+  replicas: 3
+  config:
+    retention.ms: 604800000
+    cleanup.policy: compact,delete
+    compression.type: zstd

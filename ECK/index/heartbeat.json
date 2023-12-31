@@ -1,0 +1,151 @@
+{
+    "_index": ".ds-heartbeat-8.11.2-2023.12.12-000001",
+    "_id": "mXY0XYwB8ccwBwAWYFAM",
+    "_version": 1,
+    "_score": null,
+    "fields": {
+        "monitor.status": [
+            "down"
+        ],
+        "summary.attempt": [
+            1
+        ],
+        "monitor.timespan": [
+            {
+                "lt": "2023-12-12T08:46:11.750Z",
+                "gte": "2023-12-12T08:46:01.750Z"
+            }
+        ],
+        "monitor.name.text": [
+            "step webserver window"
+        ],
+        "state.up": [
+            0
+        ],
+        "state.id": [
+            "default-18c5d3434ef-1"
+        ],
+        "monitor.id": [
+            "step-webserver-window"
+        ],
+        "url.scheme": [
+            "http"
+        ],
+        "resolve.ip": [
+            "127.0.0.1"
+        ],
+        "monitor.name": [
+            "step webserver window"
+        ],
+        "agent.type": [
+            "heartbeat"
+        ],
+        "summary.up": [
+            0
+        ],
+        "resolve.rtt.us": [
+            561
+        ],
+        "summary.status": [
+            "down"
+        ],
+        "monitor.ip": [
+            "127.0.0.1"
+        ],
+        "url.port": [
+            80
+        ],
+        "summary.max_attempts": [
+            1
+        ],
+        "agent.name": [
+            "bn01k8sstp001"
+        ],
+        "url.full": [
+            "http://localhost"
+        ],
+        "monitor.duration.us": [
+            1019944
+        ],
+        "monitor.type": [
+            "http"
+        ],
+        "error.code": [
+            "NET_COULD_NOT_CONNECT"
+        ],
+        "state.status": [
+            "down"
+        ],
+        "state.down": [
+            2
+        ],
+        "summary.final_attempt": [
+            true
+        ],
+        "agent.hostname": [
+            "bn01k8sstp001"
+        ],
+        "url.full.text": [
+            "http://localhost"
+        ],
+        "summary.retry_group": [
+            "e032e028-98ca-11ee-82e5-005056badb03"
+        ],
+        "summary.down": [
+            1
+        ],
+        "error.type": [
+            "io"
+        ],
+        "@timestamp": [
+            "2023-12-12T08:46:01.750Z"
+        ],
+        "agent.id": [
+            "be246926-8f6f-4188-8f20-85926adbc997"
+        ],
+        "ecs.version": [
+            "8.0.0"
+        ],
+        "monitor.id.text": [
+            "step-webserver-window"
+        ],
+        "error.message": [
+            "Could not connect to '127.0.0.1:80' with error: dial tcp 127.0.0.1:80: connectex: No connection could be made because the target machine actively refused it."
+        ],
+        "event.type": [
+            "heartbeat/summary"
+        ],
+        "monitor.check_group": [
+            "e032e028-98ca-11ee-82e5-005056badb03-1"
+        ],
+        "url.domain": [
+            "localhost"
+        ],
+        "agent.ephemeral_id": [
+            "2017e9f2-75a0-4a65-8ee2-2c4f2644e775"
+        ],
+        "agent.version": [
+            "8.11.2"
+        ],
+        "state.checks": [
+            2
+        ],
+        "state.duration_ms": [
+            10023
+        ],
+        "state.started_at": [
+            "2023-12-12T08:45:51.727Z"
+        ],
+        "event.dataset": [
+            "http"
+        ]
+    },
+    "highlight": {
+        "monitor.name": [
+            "@kibana-highlighted-field@step webserver window@/kibana-highlighted-field@"
+        ]
+    },
+    "sort": [
+        1702370761750
+    ]
+}

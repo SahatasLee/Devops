@@ -1,0 +1,26 @@
+{
+    "event": {
+        "kind": "alert"
+    },
+    "rule": {
+        "id": "{{rule.id}}",
+        "name": "{{rule.name}}",
+        "params": {
+            "{{rule__type}}": "{{params}}"
+        }
+    },
+    "kibana": {
+        "alert": {
+            "id": "{{alert.id}}",
+            "context": {
+                "{{rule__type}}": "{{context}}"
+            }
+        }
+    },
+    "date": "{{date}}",
+    "state": {
+        "monitorName": "{{monitorName}}",
+        "monitorUrl": "{{monitorUrl}}",
+        "hostname": "{{observerHostname}}"
+    }
+}

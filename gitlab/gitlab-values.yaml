@@ -62,7 +62,7 @@ global:
   hosts:
     domain: khaolakonline.com
     hostSuffix:
-    https: true
+    https: false
     externalIP: 10.111.0.117
     ssh: ~
     gitlab: {}
@@ -79,12 +79,11 @@ global:
     configureCertmanager: true
     provider: nginx
     # class:
-    annotations: 
-      "nginx.ingress.kubernetes.io/ssl-redirect": "false"
+    # annotations: 
+    #   "nginx.ingress.kubernetes.io/ssl-redirect": "false"
     enabled: true
-    tls: {}
-    # enabled: false
-    #   secretName:
+    tls: 
+      enabled: false
     path: /
     pathType: Prefix
 

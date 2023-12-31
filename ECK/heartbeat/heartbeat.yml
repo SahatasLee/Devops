@@ -1,0 +1,37 @@
+heartbeat.config.monitors:
+  # Directory + glob pattern to search for configuration files
+  path: C:\Program Files\Heartbeat\heartbeat-8.11.2-windows-x86_64\heartbeat.yml
+  # If enabled, heartbeat will periodically check the config.monitors path for changes
+  reload.enabled: true
+  # How often to check for changes
+  reload.period: 1s
+heartbeat.monitors:
+- type: http
+  id: step-webserver-window
+  # install heartbeat same host with step webserver window
+  name: step webserver window
+  hosts: ["http://localhost"]
+  schedule: "@every 10s"
+  # username: "elastic"
+  # password: "V03A23zK08D1e3ppi6Q4MMmI"
+  # ssl.certificate_authorities: ["c:/eck/certs/ca.crt"]
+heartbeat.run_from:
+  id: step-webserver-bangkok
+  geo:
+    name: bangkok
+    location: 13.7563, 100.5018  # Latitude and Longitude coordinates for Bangkok
+    continent_name: Asia  # Modify the continent name if needed
+    country_iso_code: TH  # Modify the country ISO code if needed
+    region_name: Bangkok  # Modify the region name if needed
+    city_name: Bangkok
+    # region_iso_code: NY
+    timezone: Asia/Bangkok
+output.elasticsearch:
+  hosts: ["https://10.111.0.121:9200"]
+  username: "elastic"
+  password: "V03A23zK08D1e3ppi6Q4MMmI"
+  # If using Elasticsearch's default certificate
+  # ssl.ca_trusted_fingerprint: "<es cert fingerprint>"
+  ssl.certificate_authorities: ["c:/eck/certs/ca.crt"]
+setup.kibana:
+  host: "https://10.111.0.120:5601"
