@@ -1,0 +1,87 @@
+{
+    "ecs" => {
+        "version" => "8.0.0"
+    },
+    "@version" => "1",
+    "tags" => [
+        [
+            0
+        ] "_dateparsefailure"
+    ],
+    "state" => {
+        "started_at" => "2023-12-21T14:08:01.6195365+07:00",
+        "ends" => nil,
+        "flap_history" => [],
+        "status" => "down",
+        "up" => 0,
+        "down" => 27717,
+        "checks" => 27717,
+        "id" => "step-webserver-bangkok-18c8b33ded3-1",
+        "duration_ms" => "831505615"
+    },
+    "@timestamp" => 2023-12-30T22: 06: 25.877Z,
+    "summary" => {
+        "attempt" => 1,
+        "up" => 0,
+        "down" => 1,
+        "status" => "down",
+        "final_attempt" => true,
+        "max_attempts" => 1,
+        "retry_group" => "ac414149-a75f-11ee-af8e-005056badb03"
+    },
+    "url" => {
+        "domain" => "localhost",
+        "scheme" => "http",
+        "port" => 80,
+        "full" => "http://localhost"
+    },
+    "resolve" => {
+        "rtt" => {
+            "us" => 558
+        },
+        "ip" => "127.0.0.1"
+    },
+    "agent" => {
+        "id" => "be246926-8f6f-4188-8f20-85926adbc997",
+        "type" => "heartbeat",
+        "name" => "bn01k8sstp001",
+        "ephemeral_id" => "d6508318-ef7c-4823-9915-efb27b99f0c8",
+        "version" => "8.11.2"
+    },
+    "event" => {
+        "dataset" => "http",
+        "type" => "heartbeat/summary"
+    },
+    "error" => {
+        "type" => "io",
+        "message" => "Could not connect to '127.0.0.1:80' with error: dial tcp 127.0.0.1:80: connectex: No connection could be made because the target machine actively refused it.",
+        "stack_trace" => nil,
+        "code" => "NET_COULD_NOT_CONNECT"
+    },
+    "observer" => {
+        "geo" => {
+            "location" => "13.7563, 100.5018",
+            "name" => "bangkok",
+            "region_name" => "Bangkok",
+            "country_iso_code" => "TH",
+            "city_name" => "Bangkok",
+            "continent_name" => "Asia"
+        },
+        "name" => "step-webserver-bangkok"
+    },
+    "monitor" => {
+        "type" => "http",
+        "name" => "step webserver window test",
+        "duration" => {
+            "us" => 1002258
+        },
+        "status" => "down",
+        "check_group" => "ac414149-a75f-11ee-af8e-005056badb03-1",
+        "timespan" => {
+            "lt" => "2023-12-30T22:06:55.877Z",
+            "gte" => "2023-12-30T22:06:25.877Z"
+        },
+        "id" => "step-webserver-window-test",
+        "ip" => "127.0.0.1"
+    }
+}

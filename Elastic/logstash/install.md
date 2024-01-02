@@ -55,3 +55,16 @@ cd /usr/share/logstash/
 ## Kubernetes
 
 https://github.com/elastic/helm-charts/blob/main/logstash/README.md
+
+```bash
+root@ansible-server:~# helm install logstash elastic/logstash
+NAME: logstash
+LAST DEPLOYED: Tue Jan  2 12:05:57 2024
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+NOTES:
+1. Watch all cluster members come up.
+  $ kubectl get pods --namespace=default -l app=logstash-logstash -w
+```
