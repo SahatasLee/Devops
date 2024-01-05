@@ -1,0 +1,17 @@
+{
+    "@version" => "1",
+    "interval" => "1m",
+ "serviceName" => "loadgenerator",
+"transactionType" => "request",
+        "date" => "2024-01-05T03:33:58.299Z",
+   "threshold" => "10000",
+  "@timestamp" => 2024-01-05T03:52:01.258296667Z,
+      "reason" => "Avg. latency is 11 ms in the last 1 min for loadgenerator. Alert when > 10 ms.",
+          "T2" => "01/01/1970, 07:33:44",
+"NewTimestamp" => 1970-01-01T07:33:44.000Z,
+"triggerValue" => "11 ms",
+         "env" => "All",
+    "rulename" => "Latency threshold | loadgenerator",
+"kibanaBaseUrl" => "",
+"viewInAppUrl" => "/app/apm/services/loadgenerator?transactionType=request&environment=ENVIRONMENT_ALL"
+}

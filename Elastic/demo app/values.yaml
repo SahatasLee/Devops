@@ -1,0 +1,19 @@
+components:
+  frontendProxy:
+    service:
+      type: LoadBalancer
+components:
+  frontend:
+    env:
+      - name: PUBLIC_OTEL_EXPORTER_OTLP_TRACES_ENDPOINT
+        value: http://10.111.0.123:8200
+opentelemetry-collector:
+  config:
+    exporters:
+      otlphttp/example:
+        endpoint: http://10.111.0.123:8200
+
+    service:
+      pipelines:
+        traces:
+          exporters: [spanmetrics, otlphttp/example]

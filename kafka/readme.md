@@ -86,7 +86,7 @@ https://strimzi.io/blog/2018/11/01/using-helm/
 
     ```Bash
     # apply kafka-cluster folder
-    kubectl -n kafka apply kafka-cluster/
+    kubectl -n kafka apply -f kafka-cluster/
     ```
 
     Output
