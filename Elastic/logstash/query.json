@@ -1,0 +1,20 @@
+{
+    "query": {
+        "match": {
+            "monitor.status": "down"
+        },
+        "range": {
+            "@timestamp": {
+                "gte": "now-1d/d"
+            }
+        }
+    },
+    "sort": [
+        {
+            "@timestamp": {
+                "order": "desc"
+            }
+        }
+    ],
+    "size": 1
+}
