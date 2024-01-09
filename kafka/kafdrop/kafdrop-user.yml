@@ -1,9 +1,7 @@
-## KAFKAUSER ##
----
-apiVersion: kafka.strimzi.io/v1beta2
+apiVersion: kafka.strimzi.io/v1beta1
 kind: KafkaUser
 metadata:
-  name: user-test
+  name: kafdrop-user
   labels:
     strimzi.io/cluster: kafka-cluster-poc
 spec:
@@ -12,17 +10,23 @@ spec:
   authorization:
     type: simple
     acls:
-      # access to kafka topic [READ]
       - resource:
           type: topic
-          name: topic-test
+          name: '*'
           patternType: literal
         operation: All
-        host: "*"
-      # access to kafka group [All]
+      - resource:
+          type: cluster
+          name: '*'
+          patternType: literal
+        operation: All
       - resource:
           type: group
-          name: group-test
+          name: '*'
           patternType: literal
         operation: All
-        host: "*"
+      - resource:
+          type: transactionalId
+          name: '*'
+          patternType: literal
+        operation: All

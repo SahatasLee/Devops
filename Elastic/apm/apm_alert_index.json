@@ -1,0 +1,13 @@
+{
+    "date": "{{date}}",
+    "serviceName": "{{context.serviceName}}",
+    "interval": "{{context.interval}}",
+    "rulename": "{{rule.name}}",
+    "triggerValue": "{{context.triggerValue}}",
+    "env": "{{context.environment}}",
+    "reason": "{{context.reason}}",
+    "threshold": "{{context.threshold}}",
+    "transactionType": "{{context.transactionType}}",
+    "viewInAppUrl": "{{context.viewInAppUrl}}",
+    "kibanaBaseUrl": "{{kibanaBaseUrl}}"
+  }

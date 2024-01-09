@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/instance: kafdrop-poc
+    app.kubernetes.io/name: kafdrop-poc
+  name: kafdrop-poc
+  namespace: kafka
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: kafdrop-poc
+      app.kubernetes.io/name: kafdrop-poc
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: kafdrop-poc
+        app.kubernetes.io/name: kafdrop-poc
+    spec:
+      containers:
+      - env:
+        - name: KAFKA_BROKERCONNECT
+          value: 10.111.0.124:9094
+        - name: KAFKA_PROPERTIES
+          value: c2VjdXJpdHkucHJvdG9jb2w9U0FTTF9QTEFJTlRFWFQKc2FzbC5tZWNoYW5pc209U0NSQU0tU0hBLTUxMiAKc2FzbC5qYWFzLmNvbmZpZz1vcmcuYXBhY2hlLmthZmthLmNvbW1vbi5zZWN1cml0eS5zY3JhbS5TY3JhbUxvZ2luTW9kdWxlIHJlcXVpcmVkIHVzZXJuYW1lPSJrYWZkcm9wLXVzZXIiIHBhc3N3b3JkPSJYbGtOY2poUEpMSVgiOw==
+        - name: KAFKA_TRUSTSTORE
+        - name: KAFKA_KEYSTORE
+        - name: JVM_OPTS
+          value: -Xms512M -Xmx512M
+        - name: JMX_PORT
+          value: "8686"
+        - name: HOST
+        - name: SERVER_SERVLET_CONTEXTPATH
+        - name: KAFKA_PROPERTIES_FILE
+          value: kafka.properties
+        - name: KAFKA_TRUSTSTORE_FILE
+          value: kafka.truststore.jks
+        - name: KAFKA_KEYSTORE_FILE
+          value: kafka.keystore.jks
+        - name: SERVER_PORT
+          value: "9000"
+        - name: CMD_ARGS
+          value: --topic.deleteEnabled=false --topic.createEnabled=false
+        image: obsidiandynamics/kafdrop:latest
+        imagePullPolicy: Always
+        name: kafdrop-poc
+        ports:
+        - containerPort: 9000
+          name: http
+          protocol: TCP
+        resources:
+          requests:
+            cpu: 250m
+            memory: 512Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafdrop-poc-bootstrap
+  namespace: kafka
+  annotations:
+    metallb.universe.tf/allow-shared-ip: "key-to-share-10.111.0.128"
+spec:
+  type: LoadBalancer
+  loadBalancerIP: 10.111.0.128
+  ports:
+    - name: kafdrop-poc
+      protocol: TCP
+      port: 9037
+      targetPort: 9000
+  selector:
+    app.kubernetes.io/name: kafdrop-poc  
