@@ -1,0 +1,35 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgress
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      PGDATA: /var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    volumes:
+      - C:\Users\66939\postgresql\data:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:8080"
+
+  pgadmin4:
+    image: elestio/pgadmin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "sahatasnutlee@gmail.com"
+      PGADMIN_DEFAULT_PASSWORD: "pgadmin"
+      PGADMIN_LISTEN_PORT: "8080"
+    ports:
+    - "8081:8080"
+    volumes:
+    - ./servers.json:/pgadmin4/servers.json

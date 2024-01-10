@@ -16,79 +16,88 @@ Ref. https://medium.com/@somprasongd/docker-networking-59b6637de3df
 ## Docker push
 Ref. https://docs.docker.com/get-started/04_sharing_app/ 
 
-Command :
+## Docker command
 สามารถย่อ id ให้เหลือแค่ unique id ที่สั้นที่สุดได้
-docker images 
-// show all images
 
-Docker build -t name-image . 
-//  สร้าง image ชื่อตาม name-image โดยหาที่ไฟล์ /. 
+```bash
+docker images 
+# แสดง images ทั้งหมด
+
+docker build -t name-image .
+# สร้าง image ชื่อตาม name-image โดยหาที่ไฟล์ /. 
 
 docker run name-image/id-image 
-// starts new container 
+# starts new container 
 
-Docker ps -a 
-// show all container
+docker ps -a 
+# แสดง container ทั้งหมด
 
-Docker history name-dockerimage 
-// เรียกดู layer ของ image
+docker history name-dockerimage 
+# เรียกดู layer ของ image
 
-Docker stop id-container/name-container
-// stop running container สามารถย่อให้เหลือแค่ unique id ที่สั้นที่สุดได้
+docker stop id-container หรือ name-container
+# stop running container สามารถย่อให้เหลือแค่ unique id ที่สั้นที่สุดได้
 
-Docker rm id-container 
-// remove container
+docker rm id-container 
+# remove container
 
-Docker rmi id-image 
-// remove image
+docker rmi id-image 
+# remove image
 
-Docker images prune
-// remove all dangling images
+docker images prune
+# remove all dangling images
 
-Docker run —name name-container -d -p 8080:80 image:tag
-// name container and map port
+docker run —name name-container -d -p 8080:80 image:tag
+# name container and map port
 
-Docker run —name name-container -v $(pwd):/usr/share/nginx/html -d -p 8080:80 image:tag
-// volume share data host and container bind volumes 
+docker run —name name-container -v $(pwd):/usr/share/nginx/html -d -p 8080:80 image:tag
+# volume share data host and container bind volumes 
 
-Docker run —name name-container -v $(pwd):/usr/share/nginx/html:ro -d -p 8080:80 image:tag
-// volume share data host and container read only
+docker run —name name-container -v $(pwd):/usr/share/nginx/html:ro -d -p 8080:80 image:tag
+# volume share data host and container read only
 
 docker exec -it website bash
-// container bash  
+# container bash  
 
-Docker tag website:latest website:1
-// set tag
+docker tag website:latest website:1
+# set tag
 
- docker push YOUR-DOCKER-NAME/name-image:tag
-// push image to registry
+docker push YOUR-DOCKER-NAME/name-image:tag
+# push image to registry
 
-Docker  pull images-registry
-// pull image from a registry
+docker  pull images-registry
+# pull image from a registry
 
-Docker inspect id-image/name-image
-// inspect images for debug
+docker inspect id-image/name-image
+# inspect images for debug
 
-Docker volume create data_volume
-// 
+docker volume create data_volume
+# 
 
-Docker network  create option name-network
-//
+docker network  create option name-network
+#
 
-Docker network connect network container
-//
+docker network connect network container
+#
 
 sudo systemctl start docker
+#
 
 Systemctl start docker
+#
 
 systemctl status docker
+#
 
 Systemctl stop docker
+#
 
 Dockerd —debug
+#
 
 Sudo dockerd
+#
+```
 
 Ref. Command : https://docs.docker.com/engine/reference/commandline/images/
 
@@ -99,17 +108,22 @@ Ref. https://medium.com/i-gear-geek/%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%9
 
 ## Docker-compose
 
-Command 
-`docker-compose up`: create and start containers
-`docker-compose images`: show images
-`docker-compose ps`: show container
-`docker-compose stop`:  stop services
-`docker-compose start`: start services
-`docker-compose build`: build images
-
-`docker-compose.yml`
-
+```bash
+docker-compose up
+# create and start containers
+docker-compose images
+# show images
+docker-compose ps
+# show container
+docker-compose stop
+# stop services
+docker-compose start
+# start services
+docker-compose build
+# build images
 ```
+Example `docker-compose.yml`
+```yml
 version: '3'
 services:
   wp_db:
@@ -165,6 +179,7 @@ https://medium.com/@somprasongd/docker-compose-%E0%B8%84%E0%B8%B7%E0%B8%AD-fc8b3
 7. Use the least privileged user
 8. Scan your images for Vulnerabilities
 
+```bash
 docker run -d \
     --network mongo-network \
     --name mongo-express \
@@ -173,3 +188,4 @@ docker run -d \
     -e ME_CONFIG_BASICAUTH_USERNAME="user" \
     -e ME_CONFIG_BASICAUTH_PASSWORD="fairly long password" \
     mongo-express
+```

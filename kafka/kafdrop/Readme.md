@@ -28,5 +28,6 @@ docker run -d --rm -p 9039:9000 \
 ```
 
 ```Bash
-docker ps #for check image is running
+# for check image is running
+docker ps
 ```
