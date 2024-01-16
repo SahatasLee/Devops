@@ -1,11 +1,11 @@
 from kafka import KafkaProducer #!!!!!
 import zstandard as zstd
 
-BOOTSTRAP_SERVERS = ['10.111.0.125:9094']
+BOOTSTRAP_SERVERS = ['10.7.37.202:9094']
 security_protocol = 'SASL_PLAINTEXT'
 sasl_mechanism = 'SCRAM-SHA-512'
-sasl_plain_username = 'user-test'
-sasl_plain_password = 'dNam4SJtKb81'
+sasl_plain_username = 'ea-test'
+sasl_plain_password = 'BalN5xG1ba62'
 
 # Create Kafka producer instance
 producer = KafkaProducer(
@@ -23,10 +23,9 @@ producer = KafkaProducer(
 print("connected bootstrap: " + str(producer.bootstrap_connected()))
 
 # Produce a message to a Kafka topic with a key
-topic = 'topic-test' #เปลี่ยนชื่อ
-message = 'Hello, Kafka! Produce messages from python.'
-num_loops = int(input("Enter the number of times to loop: "))
-for i in range(num_loops):
+topic = 'ea-topic-test' #เปลี่ยนชื่อ
+message = 'Hello Test Production Number 1 , Kafka! Produce messages from python.'
+for i in range(int(input("Enter the number of times to loop: "))):
     key = i
     producer.send(topic, key=key, value=str(message + " Number: " + str(i)))
     print('Message sent to Kafka: ', str(message + " Number: " + str(i)))
