@@ -46,7 +46,7 @@ cd /usr/share/logstash/
 ./bin/logstash -f /etc/logstash/conf.d/logstash.conf
 
 ## Run by full path
-/usr/share/logstash//bin/logstash -f /etc/logstash/conf.d/logstash.conf
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/logstash.conf
 ```
 
 ### Logs

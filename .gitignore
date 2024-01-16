@@ -1,3 +1,4 @@
 go.*
 Elastic/otel-python-backend/__pycache__/
 Elastic/otel-python-backend/.venv/
+Elastic/logstash/conf/.env
