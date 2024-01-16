@@ -1,17 +1,6 @@
 # SQL Script
 table_names = [
-                'RPT_Sales_Internal',
-                'RPT_Sales_External',
-                'RPT_Sales_ThirdParty',
-                'RPT_CRM',
-                'RPT_Inventory',
-                'RPT_Logistics',
-                'RPT_Production',
-                'RPT_Marketing',
-                'RPT_MasterData',
-                'RPT_Procurement',
-                'RPT_Survey',
-                'RPT_Finance'
+                
                ]
 
 # Initialize the script

@@ -3,7 +3,7 @@ import string
 
 # SQL Script
 user_names = [
-                '70068159'
+                'username'
                ]
 
 # Initialize the script

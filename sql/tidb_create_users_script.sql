@@ -1,3 +1,3 @@
 
-# 70068159
-CREATE USER '70068159'@'%' IDENTIFIED BY 'PUHxvHWi';
+# username
+CREATE USER 'username'@'%' IDENTIFIED BY 'password';
