@@ -1,12 +1,11 @@
 # Define a hash that maps patterns to email addresses
 email_map = {
-  /^ptp/ => 'ptp@gmail.com',
-  /^ddd/ => 'ddd@gmail.com',
-  /^rtr/ => 'rtr@gmail.com'
+    /^frontend/ => 'frontend@gmail.com',
+    /^load/ => 'load@outlook.co.th'
 }
 
 # Input servicename
-servicename = 'rtr-123@#$'
+servicename = 'frontend-#?!'
 
 num = 0
 
