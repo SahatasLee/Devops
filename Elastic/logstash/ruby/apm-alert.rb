@@ -9,7 +9,7 @@ def filter(event)
     offset = 7 * 3600
     event.set("newtimestamp", Time.at(t1 + offset))
     t2 = Time.at(t1 + offset)
-    event.set("T2", t2.strftime("%d/%m/%Y, %H:%M:%S") ) 
+    event.set("t2", t2.strftime("%d/%m/%Y, %H:%M:%S") ) 
 
     # Check if the event contains a 'service_name' field
     if event.get('servicename')
@@ -20,7 +20,7 @@ def filter(event)
         # 'ptp-service' => 'ptp@email.com',
         # Add more service names and corresponding email addresses here
         'loadgenerator' => 'loadgenerator@gmail.com',
-        'frontend-proxy' => 'frontend-proxy@gmail.com'
+        'frontend-proxy' => 'frontend-proxy@gmail.com',
       }
   
       # Check if the service name exists in the mapping
