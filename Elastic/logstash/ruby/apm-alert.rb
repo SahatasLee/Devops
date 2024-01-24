@@ -1,15 +1,16 @@
-# custom_email_filter.rb
+# Ruby version 3.1.0
 require 'time'
 
 
 # Define a custom Logstash filter plugin
 def filter(event)
+    puts "Ruby version: #{RUBY_VERSION}"
     t1 = event.get("@timestamp")
-    t1 = Time.parse(t1)
     offset = 7 * 3600
-    event.set("newtimestamp", Time.at(t1 + offset))
-    t2 = Time.at(t1 + offset)
-    event.set("T2", t2.strftime("%d/%m/%Y, %H:%M:%S") ) 
+    event.set("new_timestamp", Time.at(t1 + offset))
+    # strftime auto +7
+    # +o is debug
+    event.set("custom_timestamp", Time.at(t1 + 0).strftime("%d/%m/%Y, %H:%M:%S") ) 
 
     # Check if the event contains a 'service_name' field
     if event.get('servicename')
@@ -19,8 +20,8 @@ def filter(event)
       service_email_mapping = {
         # 'ptp-service' => 'ptp@email.com',
         # Add more service names and corresponding email addresses here
-        'loadgenerator' => 'loadgenerator@gmail.com',
-        'frontend-proxy' => 'frontend-proxy@gmail.com'
+        'loadgenerator' => 'sahatasnutlee@gmail.com',
+        'frontend-proxy' => 'sahataslee@outlook.co.th'
       }
   
       # Check if the service name exists in the mapping

@@ -6,6 +6,9 @@
 # linux path
 vi /etc/logstash/conf.d/logstash.conf
 
+# Ruby file
+vi /etc/logstash/apm-alert.rb
+
 # Run by full path
 /usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/logstash.conf
 ```
