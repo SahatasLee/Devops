@@ -35,6 +35,11 @@ https://www.elastic.co/guide/en/beats/heartbeat/current/heartbeat-installation-c
 
 https://www.elastic.co/guide/en/beats/heartbeat/8.5/monitor-http-options.html
 
+```bash
+# window path
+C:\Program Files\Heartbeat\heartbeat-8.11.2-windows-x86_64\heartbeat.yml
+```
+
 Type `discover`
 
 ## Check

@@ -1,12 +1,12 @@
 # SQL Script
 user_names = [
-               
                ]
 
 # Initialize the script
 script_template = """
 # {user}
-GRANT Select ON RPT_Inventory.* TO '{user}'@'%';
+GRANT Select ON RTM_Staging.RPT_MCMC_Master_ChangeCode TO '{user}'@'%';
+GRANT Select ON RTM_Staging.RPT_MCMC_Master_Store TO '{user}'@'%';
 """
 
 # Initialize an empty result script
