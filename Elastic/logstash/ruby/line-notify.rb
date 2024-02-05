@@ -48,6 +48,7 @@ def filter(event)
         end
       end
     end
+
     # Debugging: Print a message indicating that an email has been sent and display the value of the 'email_sent' field from the 'event' data.
     # Debug email status
     # puts "Email sent:",event.get('email_sent')
