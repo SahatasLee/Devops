@@ -1,5 +1,15 @@
 # Helm
 
+## Before Apply
+
+add `initContainerEnv` to `value.yaml`
+
+```bash
+  initContainerEnv:
+  - name: CACHE_DIR
+    value: "/tmp/cache"
+```
+
 ```bash
 helm repo add jenkinsci https://charts.jenkins.io
 helm repo update
@@ -47,14 +57,6 @@ echo http://$NODE_IP:$NODE_PORT/login
 http://10.111.0.113:30175/login
 ```
 
-add to `value.yaml`
-
-```bash
-  initContainerEnv:
-  - name: CACHE_DIR
-    value: "/tmp/cache"
-```
-
 ```bash
 NAME: jenkins
 LAST DEPLOYED: Tue Jan 30 16:00:01 2024
@@ -64,15 +66,15 @@ REVISION: 1
 NOTES:
 1. Get your 'admin' user password by running:
   kubectl exec --namespace jenkins -it svc/jenkins -c jenkins -- /bin/cat /run/secrets/additional/chart-admin-password && echo
-2. Get the Jenkins URL to visit by running these commands in the same shell:
+1. Get the Jenkins URL to visit by running these commands in the same shell:
   NOTE: It may take a few minutes for the LoadBalancer IP to be available.
         You can watch the status of by running 'kubectl get svc --namespace jenkins -w jenkins'
   export SERVICE_IP=$(kubectl get svc --namespace jenkins jenkins --template "{{ range (index .status.loadBalancer.ingress 0) }}{{ . }}{{ end }}")
   echo http://$SERVICE_IP:8080
 
-3. Login with the password from step 1 and the username: admin
-4. Configure security realm and authorization strategy
-5. Use Jenkins Configuration as Code by specifying configScripts in your values.yaml file, see documentation: http://$SERVICE_IP:8080/configuration-as-code and examples: https://github.com/jenkinsci/configuration-as-code-plugin/tree/master/demos
+1. Login with the password from step 1 and the username: admin
+2. Configure security realm and authorization strategy
+3. Use Jenkins Configuration as Code by specifying configScripts in your values.yaml file, see documentation: http://$SERVICE_IP:8080/configuration-as-code and examples: https://github.com/jenkinsci/configuration-as-code-plugin/tree/master/demos
 
 For more information on running Jenkins on Kubernetes, visit:
 https://cloud.google.com/solutions/jenkins-on-container-engine
@@ -84,7 +86,7 @@ https://jenkins.io/projects/jcasc/
 NOTE: Consider using a custom image with pre-installed plugins
 ```
 
-## 
+## Error
 
 ```bash
   Warning  FailedScheduling  100s  default-scheduler  0/4 nodes are available: 4 node(s) didn't find available persistent volumes to bind.
@@ -93,6 +95,8 @@ NOTE: Consider using a custom image with pre-installed plugins
   Normal  WaitForFirstConsumer  2m32s                persistentvolume-controller  waiting for first consumer to be created before binding
   Normal  WaitForPodScheduled   4s (x10 over 2m19s)  persistentvolume-controller  waiting for pod jenkins-0 to be scheduled
 ```
+
+> Have to create pv before apply
 
 ## Permission denied on disable Setup Wizard step
 
@@ -103,7 +107,7 @@ disable Setup Wizard
 root@ansible-server:~#
 ```
 
-https://github.com/jenkinsci/helm-charts/issues/210
+> https://github.com/jenkinsci/helm-charts/issues/210
 
 ## Error while deploying on OpenShift: AccessDeniedException: /.cache
 
@@ -138,7 +142,7 @@ Caused by: java.nio.file.FileSystemException: /root/.cache: Read-only file syste
 java.nio.file.FileSystemException: /root/.cache: Read-only file system
 ```
 
-https://github.com/jenkinsci/helm-charts/issues/506
+> https://github.com/jenkinsci/helm-charts/issues/506
 
 add to `value.yaml`
 
