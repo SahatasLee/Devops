@@ -7,6 +7,9 @@ sasl_mechanism = 'SCRAM-SHA-512'
 sasl_plain_username = 'ea-test'
 sasl_plain_password = 'BalN5xG1ba62'
 
+topic = 'ea-topic-test' #เปลี่ยนชื่อ
+message = 'Hello Test Production Number 1 , Kafka! Produce messages from python.'
+
 # Create Kafka producer instance
 producer = KafkaProducer(
     bootstrap_servers=BOOTSTRAP_SERVERS, #เอาไว้ให้consumerเชื่อมกับbooststrapได้
@@ -23,8 +26,6 @@ producer = KafkaProducer(
 print("connected bootstrap: " + str(producer.bootstrap_connected()))
 
 # Produce a message to a Kafka topic with a key
-topic = 'ea-topic-test' #เปลี่ยนชื่อ
-message = 'Hello Test Production Number 1 , Kafka! Produce messages from python.'
 for i in range(int(input("Enter the number of times to loop: "))):
     key = i
     producer.send(topic, key=key, value=str(message + " Number: " + str(i)))
