@@ -5,7 +5,7 @@ require 'time'
 # Define a custom Logstash filter plugin
 def filter(event)
     puts "Ruby version: #{RUBY_VERSION}"
-    puts "Ruby version: #{RUBY_VERSION}"
+    
     t1 = event.get("@timestamp")
     offset = 7 * 3600
     event.set("new_timestamp", Time.at(t1 + offset))

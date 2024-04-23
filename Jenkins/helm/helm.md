@@ -1,5 +1,7 @@
 # Helm
 
+https://www.youtube.com/watch?v=YnZQJAMK6JI
+
 ## Before Apply
 
 add `initContainerEnv` to `value.yaml`
@@ -8,6 +10,35 @@ add `initContainerEnv` to `value.yaml`
   initContainerEnv:
   - name: CACHE_DIR
     value: "/tmp/cache"
+```
+
+Config to use Loadbalancer
+
+```bash
+  # Kubernetes service type for the JNLP agent service
+  # agentListenerServiceType is the Kubernetes Service type for the JNLP agent service,
+  # either 'LoadBalancer', 'NodePort', or 'ClusterIP'
+  # Note if you set this to 'LoadBalancer', you *must* define annotations to secure it. By default
+  # this will be an external load balancer and allowing inbound 0.0.0.0/0, a HUGE
+  # security risk:  https://github.com/kubernetes/charts/issues/1341
+  agentListenerServiceType: "ClusterIP"
+  # Optionally assign an IP to the LoadBalancer agentListenerService LoadBalancer
+  # GKE users: only regional static IPs will work for Service Load balancer.
+  agentListenerLoadBalancerIP:
+  agentListenerServiceAnnotations: {}
+
+  # Example of 'LoadBalancer' type of agent listener with annotations securing it
+  # agentListenerServiceType: LoadBalancer
+  # agentListenerServiceAnnotations:
+  #   service.beta.kubernetes.io/aws-load-balancer-internal: "True"
+  #   service.beta.kubernetes.io/load-balancer-source-ranges: "172.0.0.0/8, 10.0.0.0/8"
+
+  # LoadBalancerSourcesRange is a list of allowed CIDR values, which are combined with ServicePort to
+  # set allowed inbound rules on the security group assigned to the controller load balancer
+  loadBalancerSourceRanges:
+  - 0.0.0.0/0
+  # Optionally assign a known public LB IP
+  # loadBalancerIP: 1.2.3.4
 ```
 
 ```bash

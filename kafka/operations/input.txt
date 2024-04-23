@@ -1,0 +1,3780 @@
+
+Kafka PRD Cluster [FIRING:188] kafka-connect-prd (Connector task failed kafka-connect-prd-connect tcp-prometheus kafka/kafka-resources-metrics kafka kafka/prometheus warning KafkaConnect kafka-connect-prd-connect)
+ea-alert@thaibevapp.com
+​
+LSA DevOps Managed Service
+​
+Sat 4/20/2024 8:48 AM
+188 alerts for strimzi_io_cluster=kafka-connect-prd
+View In Alertmanager
+[188] Firing
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-mbss-activityhdr
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-oms-housebank
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-sap-fireturndoc
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-sap-sdreturnsaledoc
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-subagentbuy-competitorinfodetail
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-sys-userrole
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-activitypurpose
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-branchedcustomer
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-cashcollectionlock
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-channelcategory
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-customerleave
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-customervisit
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-delivery
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-focactivitysoproduct
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-hierarchyterritory
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-payment
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-paymentsku
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-paymenttype
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-popposstorage
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-province
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-requisition
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-restorationsku
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-routeplandetail
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-salespersontracking
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-signature
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-socompanybranch
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-soproductreturnables
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-stcustomer
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-stpromotion
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-surveystockcurrent
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-svitems
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-tambon
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-cvm-activity-online-new
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-cvm-customer-distributionproductheader
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-cvm-customer-storesalesdetail
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-cvm-customermtbuy
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-cvm-roadtostar
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-onbcallcard-advertisement
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-onbcallcard-customerchoicevisit
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-onbcallcard-priceagingbeer
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-ontradebuy-quartercompany
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-subagentbuyinfo
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-ttcallcardopenclosetimehist
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.88:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-qj5bf
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-dailysale-branch
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-oms-glaccountsap
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-sap-fidoc
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-sap-sdcndnheader
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-sap-sdsaleheader
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-sys-contact
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-activitylog
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-billingnotedetail
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-branchgroup
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-channel
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-customer
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-customershipto
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-debitnote
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-deliveryplandetail
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-hierarchy
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-materialsopopposdetail
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-paymentdetail
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-paymentterm
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-pendingbranchedcustomer
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-product
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-promotionapplyto
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-regiongroup
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-restoration
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-routecustomer
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-saleorder
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-saletype
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-sku
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-sopoppos
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-statvisitdetail-new
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-stproduct
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-strole
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-surveystockskudetail
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-svvaluetype
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-warehouse
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-cvm-buy
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-cvm-customer-productvaluedetail
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-cvm-customeractivity
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-cvm-mtbuy
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-onbcallcard
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-onbcallcard-choicevisit
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-onbcallcard-info
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-ontradebuy-distributioncompanyproductdetail
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-subagentbuy-company-product
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-ttcallcarddayclosehist
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-ttcallcardwarehousehist
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.118.89:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+namespace = kafka
+node_ip = 10.7.37.13
+node_name = kafv37s3
+pod = kafka-connect-prd-connect-5dfff8b7d7-zxzt2
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsms-tbvsmssoproduct
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-dailysale-sale-target
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-omhas-domainproduct
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-omhas-productgroup
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-oms-activity
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-oms-brand
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-oms-plantstorage
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-oms-whttype
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-oms-whtvattype
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-sap-fidocheader
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-sap-sdreturncndndoc
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-sys-fileconfig
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-sys-systemsetting
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-sys-user
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-amphur
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-areagroup
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-billingnote
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-branch
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-carryingreturnables
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-carryingsku
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-creditnote
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-creditnotesku
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-deliveryplan
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-focactivity
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-hierarchysalesteam
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-paymentpoppos
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-paymenttermchannel
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-paymenttermchannelsoccat
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-pendingcustomer
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-poppos
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-popposcurrentstock
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-popposstockdetail
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-popposstockhead
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-popposstockstoragedetail
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-promotion
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-promotionfocsoproduct
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-promotionrulesoproduct
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-promotionsoccat
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-provider
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-receivemoney
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-receivemoneydetail
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-requisitionpoppos
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-requisitionsku
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-restorationpoppos
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-route
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-routeplan
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-saleorderpoppos
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-saleordersku
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-saleorderskudiscount
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-salesteam
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-shelf
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-skuunittype
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-soardetail
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-socustomer
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-socustomercategory
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-soproduct
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-statpersonsales
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-statpersonvisit
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-stplantstorage
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-stproductcompanybranch
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-stsalesperson
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-stskuprice
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-subagentbuy-competitorinfo
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-surveystock
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-surveystockdelivereditem
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-surveystocksku
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-surveystockwarehouse
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-svanswerdetail
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-svanswerhead
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-svchoices
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-svchoicestemplate
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-svitemschoices
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-svsurvey
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-svtype
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-territorialcustomer
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-territory
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-undeliveredreason
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-visitlocationreason
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-cvm-creditcardcutoff
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-cvm-customer
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-cvm-customer-distributionproductdetail
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-cvm-customer-productbeerolddetail
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-cvm-customer-productbeeroldheader
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-cvm-customer-productvalueheader
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-cvm-customer-storesalesheader
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-cvm-customerroadtostar
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-onbcallcard-category
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-onbcallcard-customerleadingiconicchecklist
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-onbcallcard-customerpremiumchecklist
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-onbcallcard-leadingiconicchecklist
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-onbcallcard-premiumchecklist
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-ontradebuy-distributioncompanyproductheader
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-subagentbuyinfodetail
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-svstockdetail
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-svstockheader
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-ttcallcardareahist
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-ttcallcardhist
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-ttsalevolumesurveyofsubagent
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-websurvey-uploaddistributioncompanyproduct-new
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Labels
+alertname = Connector task failed
+connector = connector-otc-vsms-vsmstbv-db-vsms-workflowapproval
+container = kafka-connect-prd-connect
+endpoint = tcp-prometheus
+instance = 10.233.76.41:9404
+job = kafka/kafka-resources-metrics
+kubernetes_pod_name = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+namespace = kafka
+node_ip = 10.7.37.11
+node_name = kafv37s1
+pod = kafka-connect-prd-connect-5dfff8b7d7-crpg5
+prometheus = kafka/prometheus
+severity = warning
+strimzi_io_cluster = kafka-connect-prd
+strimzi_io_kind = KafkaConnect
+strimzi_io_name = kafka-connect-prd-connect
+Annotations
+summary = Alert manager detected connector task failed
+Source
+Sent by Alertmanager
+
+
+Reply
+
+
+Reply all
+
+
+Forward

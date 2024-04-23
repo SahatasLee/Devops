@@ -1,0 +1,251 @@
+{
+    "_index": ".ds-heartbeat-8.11.2-2024.04.01-000006",
+    "_id": "4KhH644B125LtXSSqjcB",
+    "_version": 1,
+    "_score": 0,
+    "_source": {
+      "@timestamp": "2024-04-17T08:58:45.160Z",
+      "monitor": {
+        "timespan": {
+          "gte": "2024-04-17T08:58:45.160Z",
+          "lt": "2024-04-17T08:59:15.160Z"
+        },
+        "type": "http",
+        "id": "ptp-service-isp",
+        "name": "ptp-service-isp",
+        "status": "down",
+        "check_group": "b1b1b70e-fc98-11ee-b539-005056badb03-1",
+        "duration": {
+          "us": 1009428
+        },
+        "ip": "127.0.0.1"
+      },
+      "resolve": {
+        "ip": "127.0.0.1",
+        "rtt": {
+          "us": 1422
+        }
+      },
+      "url": {
+        "full": "http://localhost",
+        "scheme": "http",
+        "domain": "localhost",
+        "port": 80
+      },
+      "agent": {
+        "name": "bn01k8sstp001",
+        "type": "heartbeat",
+        "version": "8.11.2",
+        "ephemeral_id": "e2978b7e-1869-4f97-87c6-5d2aa0334107",
+        "id": "be246926-8f6f-4188-8f20-85926adbc997"
+      },
+      "ecs": {
+        "version": "8.0.0"
+      },
+      "summary": {
+        "down": 1,
+        "status": "down",
+        "retry_group": "b1b1b70e-fc98-11ee-b539-005056badb03",
+        "attempt": 1,
+        "max_attempts": 1,
+        "final_attempt": true,
+        "up": 0
+      },
+      "state": {
+        "duration_ms": "7327745125",
+        "status": "down",
+        "checks": 244215,
+        "up": 0,
+        "down": 244215,
+        "flap_history": [],
+        "ends": null,
+        "id": "step-webserver-bangkok-18d35c4ba93-0",
+        "started_at": "2024-01-23T17:01:41.7796137+07:00"
+      },
+      "error": {
+        "code": "NET_COULD_NOT_CONNECT",
+        "message": "Could not connect to '127.0.0.1:80' with error: dial tcp 127.0.0.1:80: connectex: No connection could be made because the target machine actively refused it.",
+        "stack_trace": null,
+        "type": "io"
+      },
+      "event": {
+        "type": "heartbeat/summary",
+        "dataset": "http"
+      },
+      "observer": {
+        "name": "step-webserver-bangkok",
+        "geo": {
+          "region_name": "Bangkok",
+          "city_name": "Bangkok",
+          "name": "bangkok",
+          "location": "13.7563, 100.5018",
+          "continent_name": "Asia",
+          "country_iso_code": "TH"
+        }
+      }
+    },
+    "fields": {
+      "observer.geo.country_iso_code": [
+        "TH"
+      ],
+      "monitor.name.text": [
+        "ptp-service-isp"
+      ],
+      "monitor.timespan": [
+        {
+          "lt": "2024-04-17T08:59:15.160Z",
+          "gte": "2024-04-17T08:58:45.160Z"
+        }
+      ],
+      "observer.geo.continent_name": [
+        "Asia"
+      ],
+      "state.up": [
+        0
+      ],
+      "state.id": [
+        "step-webserver-bangkok-18d35c4ba93-0"
+      ],
+      "observer.geo.region_name": [
+        "Bangkok"
+      ],
+      "observer.geo.location": [
+        {
+          "coordinates": [
+            100.5018,
+            13.7563
+          ],
+          "type": "Point"
+        }
+      ],
+      "monitor.name": [
+        "ptp-service-isp"
+      ],
+      "resolve.rtt.us": [
+        1422
+      ],
+      "agent.name": [
+        "bn01k8sstp001"
+      ],
+      "state.status": [
+        "down"
+      ],
+      "summary.final_attempt": [
+        true
+      ],
+      "agent.hostname": [
+        "bn01k8sstp001"
+      ],
+      "summary.retry_group": [
+        "b1b1b70e-fc98-11ee-b539-005056badb03"
+      ],
+      "summary.down": [
+        1
+      ],
+      "error.type": [
+        "io"
+      ],
+      "agent.id": [
+        "be246926-8f6f-4188-8f20-85926adbc997"
+      ],
+      "ecs.version": [
+        "8.0.0"
+      ],
+      "observer.geo.name": [
+        "bangkok"
+      ],
+      "state.checks": [
+        244215
+      ],
+      "agent.version": [
+        "8.11.2"
+      ],
+      "state.started_at": [
+        "2024-01-23T10:01:41.779Z"
+      ],
+      "monitor.status": [
+        "down"
+      ],
+      "summary.attempt": [
+        1
+      ],
+      "observer.name": [
+        "step-webserver-bangkok"
+      ],
+      "url.scheme": [
+        "http"
+      ],
+      "monitor.id": [
+        "ptp-service-isp"
+      ],
+      "resolve.ip": [
+        "127.0.0.1"
+      ],
+      "agent.type": [
+        "heartbeat"
+      ],
+      "summary.up": [
+        0
+      ],
+      "summary.status": [
+        "down"
+      ],
+      "url.port": [
+        80
+      ],
+      "monitor.ip": [
+        "127.0.0.1"
+      ],
+      "summary.max_attempts": [
+        1
+      ],
+      "monitor.duration.us": [
+        1009428
+      ],
+      "url.full": [
+        "http://localhost"
+      ],
+      "monitor.type": [
+        "http"
+      ],
+      "error.code": [
+        "NET_COULD_NOT_CONNECT"
+      ],
+      "observer.geo.city_name": [
+        "Bangkok"
+      ],
+      "state.down": [
+        244215
+      ],
+      "url.full.text": [
+        "http://localhost"
+      ],
+      "@timestamp": [
+        "2024-04-17T08:58:45.160Z"
+      ],
+      "monitor.id.text": [
+        "ptp-service-isp"
+      ],
+      "error.message": [
+        "Could not connect to '127.0.0.1:80' with error: dial tcp 127.0.0.1:80: connectex: No connection could be made because the target machine actively refused it."
+      ],
+      "event.type": [
+        "heartbeat/summary"
+      ],
+      "monitor.check_group": [
+        "b1b1b70e-fc98-11ee-b539-005056badb03-1"
+      ],
+      "url.domain": [
+        "localhost"
+      ],
+      "agent.ephemeral_id": [
+        "e2978b7e-1869-4f97-87c6-5d2aa0334107"
+      ],
+      "state.duration_ms": [
+        7327745125
+      ],
+      "event.dataset": [
+        "http"
+      ]
+    }
+  }
