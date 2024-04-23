@@ -21,8 +21,8 @@ def filter(event)
       service_email_mapping = {
         # 'ptp-service' => 'ptp@email.com',
         # Add more service names and corresponding email addresses here
-        'loadgenerator' => 'sahatasnutlee@gmail.com',
-        'frontend-proxy' => 'sahataslee@outlook.co.th'
+        'loadgenerator' => 'email@gmail.com',
+        'frontend-proxy' => 'email@outlook.co.th'
       }
   
       # Check if the service name exists in the mapping

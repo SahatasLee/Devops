@@ -25,8 +25,8 @@ def filter(event)
       # /^ptp/ => 'ptp@gmail.com'
       # /Regex Pattern/ => 'email-1@email.com, email-2@email.com',
       # Add more service names and corresponding email addresses here
-      /^frontend/ => 'sahatasnutlee@gmail.com, sahataslee@outlook.co.th',
-      /^load/ => 'sahataslee@icloud.com'
+      /^frontend/ => 'email@gmail.com, email@outlook.co.th',
+      /^load/ => 'email@icloud.com'
     }
 
     # Find the matching email address

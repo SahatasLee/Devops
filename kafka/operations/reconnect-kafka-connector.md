@@ -1,6 +1,5 @@
 # Reset connector
 
-
 1. copy file connectors.txt to pod
 
 ```bash

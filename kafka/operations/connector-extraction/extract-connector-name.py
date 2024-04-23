@@ -1,7 +1,7 @@
 import re
 
 # Read text from input.txt file
-with open(r"C:\Users\sahatas.l\Devops\kafka\operations\input.txt", "r", encoding="utf-8") as file:
+with open(r".\kafka\operations\input.txt", "r", encoding="utf-8") as file:
     text = file.read()
 
 # Define regex pattern for the connector label
@@ -17,7 +17,7 @@ if matches:
         print(match)
     
         # Write the connector value to a text file
-        with open(r"C:\Users\sahatas.l\Devops\kafka\operations\output.txt", "a", encoding="utf-8") as file:
+        with open(r".\kafka\operations\output.txt", "a", encoding="utf-8") as file:
             file.write(match + "\n")  # Add a newline after each match
     print("Connector values have been written to output.txt")
 else:
