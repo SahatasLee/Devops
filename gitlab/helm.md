@@ -108,8 +108,10 @@ https://www.dbi-services.com/blog/deploy-gitlab-on-kubernetes-using-helm/
 ```
 ## Get Password
 
+username: `root`
+
 ```bash
-kubectl get secret gitlab-gitlab-initial-root-password -o jsonpath="{.data.password}" -n gitlab | base64 --decode
+kubectl get secret gitlab-gitlab-initial-root-password -o jsonpath="{.data.password}" -n gitlab | base64 --decode ; echo
 ```
 
 ## Use Local DNS for poc
