@@ -40,7 +40,28 @@ def filter(event)
       end
     end
 
-    puts "this is  from event.get #{event.get("email_sent")}"
+    # Define a hash mapping service names to line token
+    service_line_token_mapping = {
+      # /Regex Pattern/ => 'email@email.com'
+      # /^ptp/ => 'ptp@gmail.com'
+      # /Regex Pattern/ => 'email-1@email.com, email-2@email.com',
+      # Add more service names and corresponding email addresses here
+      /^frontend/ => 'b1k7RshlkYsKdjOUtMCLGhx4HiGLFbZB2LbNsajdCc5',
+      /^load/ => 'zKlQ6LYw75gpJGb12hb0ESLRrVG8d8YVocoajYheYFw'
+    }
+
+    # Find the matching line token
+    # Loops each service_email_mapping
+    service_line_token_mapping.each do |pattern, token|
+      # Check if the service name exists in the mapping
+      if service_name.match?(pattern)
+        # Set the 'email_sent' field to the corresponding email address
+        event.set('line_token', token)
+        break
+      end
+    end
+
+    puts "this is  from event.get #{event.get("line_token")}"
 
     # Return the modified event
     return [event]

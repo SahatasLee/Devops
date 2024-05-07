@@ -18,6 +18,11 @@ def filter(event)
       /^ptp/ => 'email@gmail.com, email@outlook.co.th',
       /^rtm/ => 'email@icloud.com'
     }
+
+    service_line_token_mapping = {
+      /^frontend/ => 'token',
+      /^load/ => 'token'
+    }
     
     # Define an offset of 7 hours in seconds (7 * 3600 seconds).
     offset = 7 * 3600
