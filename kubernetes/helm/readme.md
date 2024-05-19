@@ -23,4 +23,7 @@ helm search repo
 
 ```bash
 helm search repo <reponame>/<chartname> --versions
+
+# list all available versions of a gitlab chart
+helm search repo gitlab/gitlab-runner --versions
 ```

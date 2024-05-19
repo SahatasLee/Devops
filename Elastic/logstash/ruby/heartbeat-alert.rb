@@ -15,8 +15,8 @@ def filter(event)
       # /^ptp/ => 'ptp@gmail.com'
       # /Regex Pattern/ => 'email-1@email.com, email-2@email.com',
       # Add more service names and corresponding email addresses here
-      /^ptp/ => 'sahatasnutlee@gmail.com, sahataslee@outlook.co.th',
-      /^rtm/ => 'sahataslee@icloud.com'
+      /^ptp/ => 'username@gmail.com, email@outlook.co.th',
+      /^rtm/ => 'email@icloud.com'
     }
     
     # Define an offset of 7 hours in seconds (7 * 3600 seconds).

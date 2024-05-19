@@ -5,7 +5,7 @@ require 'time'
 # Define a custom Logstash filter plugin
 def filter(event)
     puts "Ruby version: #{RUBY_VERSION}"
-    puts "Ruby version: #{RUBY_VERSION}"
+    
     t1 = event.get("@timestamp")
     offset = 7 * 3600
     event.set("new_timestamp", Time.at(t1 + offset))
@@ -21,8 +21,8 @@ def filter(event)
       service_email_mapping = {
         # 'ptp-service' => 'ptp@email.com',
         # Add more service names and corresponding email addresses here
-        'loadgenerator' => 'sahatasnutlee@gmail.com',
-        'frontend-proxy' => 'sahataslee@outlook.co.th'
+        'loadgenerator' => 'email@gmail.com',
+        'frontend-proxy' => 'email@outlook.co.th'
       }
   
       # Check if the service name exists in the mapping

@@ -1,16 +1,15 @@
 # Reset connector
 
-
 1. copy file connectors.txt to pod
 
 ```bash
-kubectl -n kafka cp connectors.txt kafka-connect-prd-connect-5dfff8b7d7-kgc4b:/tmp/
+kubectl -n kafka cp connectors.txt kafka-connect-prd-connect-5dfff8b7d7-crpg5:/tmp/
 ```
 
 2. exec connect pod
 
 ```bash
-kubectl exec -it -n kafka kafka-connect-prd-connect-5dfff8b7d7-kgc4b -- /bin/bash
+kubectl exec -it -n kafka kafka-connect-prd-connect-5dfff8b7d7-crpg5 -- /bin/bash
 cd /tmp
 ```
 

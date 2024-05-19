@@ -22,9 +22,16 @@ data = {
 # Send the message using POST request.
 response = requests.post(url, headers=headers, data=data)
 
+print(requests.body)
+
 # Check the response status.
 if response.status_code == 200:
     print('Message sent successfully!')
 else:
     print(f'Failed to send message. Status code: {response.status_code}')
     print(response.text)
+
+
+curl -X POST -H 'Authorization: Bearer 
+b1k7RshlkYsKdjOUtMCLGhx4HiGLFbZB2LbNsajdCc5' -F 'message=HelloTest' \
+https://notify-api.line.me/api/notify

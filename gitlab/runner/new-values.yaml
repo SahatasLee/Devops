@@ -1,0 +1,22 @@
+probeTimeoutSeconds: 5
+gitlabUrl: http://gitlab.khaolakonline.com/
+runnerToken: "glrt-vxGrMxJNSM-prEwtgQSH"
+unregisterRunners: true
+terminationGracePeriodSeconds: 3600
+concurrent: 5
+shutdown_timeout: 0
+checkInterval: 30
+logFormat: json
+rbac:
+  create: true
+  rules: 
+    - apiGroups: [""]
+      resources: ["configmaps", "events", "pods", "pods/attach", "pods/exec", "secrets", "services"]
+      verbs: ["get", "list", "watch", "create", "patch", "update", "delete"]
+runners:
+  config: |
+    [[runners]]
+      [runners.kubernetes]
+        namespace = "{{.Release.Namespace}}"
+        image = "alpine"
+certsSecretName: gitlab-cert

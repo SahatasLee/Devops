@@ -28,3 +28,11 @@ $ prom-operator
 ```bash
 helm -n prometheus install <release-name> prometheus-community/kube-prometheus-stack --set 
 ```
+
+## Config Grafana.ini
+
+```bash
+## Grafana's primary configuration
+## NOTE: values in map will be converted to ini format
+## ref: http://docs.grafana.org/installation/configuration/
+```
