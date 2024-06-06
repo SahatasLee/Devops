@@ -1,0 +1,47 @@
+stages: 
+  - build
+  - deploy
+
+build:
+  stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:v1.14.0-debug
+    entrypoint: [""]
+  before_script:
+    - |
+      echo "-----BEGIN CERTIFICATE-----
+      MIIDTTCCAjWgAwIBAgIUGtD2yZ4NS0PbLKvMe/TDSlztBlUwDQYJKoZIhvcNAQEL
+      BQAwRTELMAkGA1UEBhMCQVUxEzARBgNVBAgMClNvbWUtU3RhdGUxITAfBgNVBAoM
+      GEludGVybmV0IFdpZGdpdHMgUHR5IEx0ZDAeFw0yNDA1MjgwODE1MjJaFw0yNTA1
+      MjgwODE1MjJaMEUxCzAJBgNVBAYTAkFVMRMwEQYDVQQIDApTb21lLVN0YXRlMSEw
+      HwYDVQQKDBhJbnRlcm5ldCBXaWRnaXRzIFB0eSBMdGQwggEiMA0GCSqGSIb3DQEB
+      AQUAA4IBDwAwggEKAoIBAQDNvK2oyTDaM6LCUPJs8j3qhgDXpfOJXYrWgn7P9rY4
+      3p7u/QsKGwOsaBw9tmVnYZ1rOkEETlCb0CqE/CXkBtxD3iWpuBmVO+E20+VuK9lq
+      soIcCq7OxA8M0UO/EoFgq5xq635t/y5J8SpK05uHEw4gBV2wZDvnwM80Uy+chjeW
+      1U2DJXYIFzOYZgVAEUm2/zShPCF88J+zKh8yYciRqNjflBwZt7p/lAR56DTpwniU
+      lwRVN3cKw1BvJuo1SjE8Pa5iJuDLu5+BG2wpP0L8P/KBEW5vT+uhhArl69hqx0ZX
+      m4FZ1OMxdMpSB94G0fijPnZWaaRoBz8srRKwmEX9eRg9AgMBAAGjNTAzMDEGA1Ud
+      EQQqMCiCEyoua2hhb2xha29ubGluZS5jb22CEWtoYW9sYWtvbmxpbmUuY29tMA0G
+      CSqGSIb3DQEBCwUAA4IBAQB+cDvSmgDzCjWPsC3kLVDNyB7wo/SBp+9lwgZtnImV
+      /v4PSAMkoXd5i28/FSULQDMj/Etard/N1M4tW7ITEmfwihdrwOELKJJuTIkWekqu
+      0wTKeftSEXuMYb3nv3oS27D3XkGb1cO75Po+91J3U/dLWH0Cr02ofgZ8jyYhAEiu
+      jTMh/fFBs1prtEHRAExzM+VgnZV2a8G0DBKv0FQkVUOS6VrL473wBlamSpByZqtK
+      mXVxXOnTteJPfiHwPeUbUvL4RUfvYPg4zDoZO0ZUQQP8uq7PAfg1G1HCbv4fm+CH
+      50OMYouysNpILcLkbImCvO0bcVJzmwY57opnwRrStC16
+      -----END CERTIFICATE-----" >> /kaniko/ssl/certs/ca-certificates.crt
+  script:
+    - echo "{\"auths\":{\"registry.khaolakonline.com\":{\"username\":\"root\",\"password\":\"glpat-6U2Azxnam3pP97bDdhdM\"}}}" > /kaniko/.docker/config.json
+    - /kaniko/executor
+      --context "${CI_PROJECT_DIR}"
+      --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
+      --destination $CI_REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:latest
+
+deploy:
+  stage: deploy
+  image: bitnami/kubectl:latest
+  before_script:
+    - mkdir -p ~/.kube
+    - cp config ~/.kube/config
+  script:
+    - cat ~/.kube/config
+    - kubectl config get-contexts

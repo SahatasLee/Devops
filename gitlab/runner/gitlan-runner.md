@@ -25,7 +25,7 @@ helm install gitlab-runner-demo gitlab/gitlab-runner -n gitlab \
 
 helm install gitlab-runner-demo gitlab/gitlab-runner -n gitlab --atomic --debug --timeout 120s -f values.yaml
 
-helm install gitlab-runner-demo gitlab/gitlab-runner -n gitlab -f <CONFIG_VALUES_FILE>
+helm install gitlab-runner-1 gitlab/gitlab-runner -n gitlab -f <CONFIG_VALUES_FILE>
 ```
 
 ## Registration Token
