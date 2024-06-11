@@ -7,6 +7,10 @@ def filter(event)
     # Ruby version 3.1.0
     # puts "Service name:",event.get('[monitor][id]')
 
+    if not (event.get('[service][environment]') == 'prd')
+      return [event]
+    end
+
     # Define a hash that maps service names to one or more email addresses.
     # The keys in this hash are regular expressions (regex patterns) used to match service names,
     # and the values are the corresponding email addresses for those services.
@@ -60,4 +64,3 @@ def filter(event)
     # Return the modified event
     return [event]
   end
-  
