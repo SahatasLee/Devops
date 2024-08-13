@@ -9,14 +9,23 @@ checkInterval: 30
 logFormat: json
 rbac:
   create: true
-  rules: 
-    - apiGroups: [""]
-      resources: ["configmaps", "events", "pods", "pods/attach", "pods/exec", "secrets", "services"]
-      verbs: ["get", "list", "watch", "create", "patch", "update", "delete"]
+serviceAccount:
+  create: true
 runners:
   config: |
     [[runners]]
       [runners.kubernetes]
         namespace = "{{.Release.Namespace}}"
         image = "alpine"
-certsSecretName: gitlab-cert
+        privileged = true
+        [[runners.kubernetes.host_aliases]]
+          ip = "10.111.0.121"
+          hostnames = ["gitlab.thaibevapp.com", "registry.thaibevapp.com", "kas.thaibevapp.com"]
+# certsSecretName: gitlab-cert
+# hostAliases:
+#    - ip: "10.111.0.121"
+#      hostnames:
+#      - "gitlab.thaibevapp.com"
+#      - "registry.thaibevapp.com"
+#      - "minio.thaibevapp.com"
+#      - "kas.thaibevapp.com"

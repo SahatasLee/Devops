@@ -3,10 +3,14 @@
 ## Install by Helm
 
 ```bash
+# add repo
 helm repo add bitnami https://charts.bitnami.com/bitnami
-
-helm install psql bitnami/postgresql --version 15.5.6
-
+helm repo update
+# list all repo
+helm search repo bitnami/postgresql --versions
+# install
+helm install psql bitnami/postgresql --version 15.5.14
+# install 
 helm install psql bitnami/postgresql --namespace psql --create-namespace --set global.storageClass=nfs-client
 ```
 

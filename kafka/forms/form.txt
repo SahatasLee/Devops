@@ -21,7 +21,7 @@ access to resource: [
 ]
 
 ---------------------------------------------------------
-					  User Access Topic Consume Only
+					  User Access Topic 
 ---------------------------------------------------------
 user owner: otc
 1. user name: otcsale
