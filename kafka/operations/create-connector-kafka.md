@@ -1,7 +1,7 @@
 # Create kafka Connector
 
 1. Download `nut Iot 1.zip` file and unzip
-2. Copy `request folder` to `\Kafka Configuration\PRD\Kafka-Debezium` and `\Kafka Configuration\Request Debezium\PRD` folder on ea-step-server
+2. Copy `request folder` to `\Kafka Configuration\PRD\Kafka-Debezium` and `\Kafka Configuration\Request Debezium\PRD` folder on step-server
 3. Rename a request folder to Upper Letter and click in
 
     folder name: `nut Iot 22.zip` > `NUT`
