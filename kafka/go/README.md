@@ -5,9 +5,15 @@
 
 
 # How to run
+```sh
+# If first time
+go mod tidy
+
+# Consume\Read
+go run .\consume\kafka-consume.go
+
+# Produce\Write
+go run .\produce\kafka-produce.go
 ```
- go run kafka-produce.go
- go run kafka-consume.go
- ```
  
 * Remark Golang will download lib automatically after run first time

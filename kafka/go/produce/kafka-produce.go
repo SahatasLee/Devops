@@ -30,7 +30,7 @@ func main() {
 		fmt.Printf("Error reading input: %v\n", err)
 	}
 
-	input = strings.Trim(input, "\n")
+	input = strings.TrimSpace(input)
 	num, err := strconv.Atoi(input)
 	if err != nil {
 		fmt.Printf("Invalid input: %v\n", err)
