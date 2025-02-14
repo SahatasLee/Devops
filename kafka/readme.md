@@ -143,10 +143,10 @@ spec:
     kubectl -n kafka apply -f kafdrop-user.yaml
     ```
 
-3. get password [get-kafka-user-password.sh](get-kafka-user-pasword.sh)
+3. get password [get-kafka-user-password.sh](get-kafka-user-password.sh)
 
     ```Bash
-    bash get-kafka-user-pasword.sh
+    bash get-kafka-user-password.sh
     ```
 
 4. go to `anisible server` and create `kafkapoc.propoties` file
