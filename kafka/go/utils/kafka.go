@@ -3,7 +3,7 @@ package utils
 import (
 	"context"
 
-	"sahatas/kafka/config"
+	"github.com/sahataslee/kafka/config"
 
 	"github.com/segmentio/kafka-go"
 )

@@ -1,4 +1,4 @@
-module sahatas/kafka
+module github.com/sahataslee/kafka
 
 go 1.22.5
 

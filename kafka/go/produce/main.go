@@ -6,9 +6,10 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"sahatas/kafka/utils"
 	"strconv"
 	"strings"
+
+	"github.com/sahataslee/kafka/utils"
 
 	"github.com/segmentio/kafka-go"
 	"github.com/segmentio/kafka-go/sasl/scram"
