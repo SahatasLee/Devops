@@ -2,4 +2,6 @@
 
 ## config
 
-    cd /etc/hosts
+```sh
+vi /etc/hosts
+```

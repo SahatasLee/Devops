@@ -17,10 +17,10 @@ import (
 
 func main() {
 	// Connection
-	Url := "10.111.0.124:9094"
-	Topic := "topic-test"
-	User := "user-test"
-	Password := "UjfjpkUJgo0J"
+	Url := "kafka.thaibevapp.com:9094"
+	Topic := "eaadmin-topic"
+	User := "ea-test"
+	Password := "BalN5xG1ba62"
 	// cfg := config.KafkaConnCfg{
 	// 	Url:   "10.111.0.124:9094",
 	// 	Topic: "topic-test",
@@ -62,9 +62,9 @@ func main() {
 		err := writer.WriteMessages(context.Background(), message)
 		if err != nil {
 			fmt.Printf("Error sending message => (%v)\n", err)
+			log.Printf("Message sent to Kafka => (%s)\n", message.Value)
 			continue
 		}
-		log.Printf("Message sent to Kafka => (%s)\n", message.Value)
 	}
 
 	if err := writer.Close(); err != nil {

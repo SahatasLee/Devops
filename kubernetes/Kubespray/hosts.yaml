@@ -1,3 +1,4 @@
+# inventory/xxx-cluster/hosts.yaml
 all:
   hosts:
     node1:

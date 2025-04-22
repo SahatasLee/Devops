@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  haproxy:
+    image: haproxy:latest
+    container_name: haproxy
+    restart: always
+    ports:
+      - "6443:6443"
+    volumes:
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+    networks:
+      - haproxy-net
+
+networks:
+  haproxy-net:
+    driver: bridge

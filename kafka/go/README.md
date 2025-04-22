@@ -3,7 +3,7 @@
 - Install Golang version 1.19 or newer
 [InstallGolang](https://go.dev/doc/install)
 
-# How to run
+## How to run
 
 ```sh
 # If first time
@@ -17,3 +17,11 @@ go run .\produce\kafka-produce.go
 ```
  
 * Remark Golang will download lib automatically after run first time
+
+## .ENV
+
+```sh
+KAFKA-URL=
+KAFKA-USER=kafka-user
+KAFKA-PASSWORD=-kafka-password
+```

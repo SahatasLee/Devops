@@ -18,6 +18,7 @@ Before installing ZFS driver please make sure your Kubernetes Cluster must meet 
     ```Bash
     apt-get install zfsutils-linux
     ```
+    
 3. Create a new pool at new disk
 
     ```Bash
