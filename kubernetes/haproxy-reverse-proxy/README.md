@@ -10,6 +10,10 @@ $ docker compose up -d
 
 ## Set kubeconfig
 
+```sh
+kubectl config set-cluster cluster.local --insecure-skip-tls-verify=true
+```
+
 Add `insecure-skip-tls-verify: true`
 
 ```sh
