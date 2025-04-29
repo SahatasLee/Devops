@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kafdrop-poc-cm
+  namespace: kafka
+data:
+  KAFKA_BROKERCONNECT: "10.111.0.117:9094"
+  KAFKA_PROPERTIES: "c2VjdXJpdHkucHJvdG9jb2w9U0FTTF9QTEFJTlRFWFQKc2FzbC5tZWNoYW5pc209U0NSQU0tU0hBLTUxMiAKc2FzbC5qYWFzLmNvbmZpZz1vcmcuYXBhY2hlLmthZmthLmNvbW1vbi5zZWN1cml0eS5zY3JhbS5TY3JhbUxvZ2luTW9kdWxlIHJlcXVpcmVkIHVzZXJuYW1lPSJrYWZkcm9wLXVzZXIiIHBhc3N3b3JkPSJCNlZ1SURaNWNZUGkiOwo="
+  JVM_OPTS: "-Xms512M -Xmx512M"
+  JMX_PORT: "8686"
+  KAFKA_PROPERTIES_FILE: "kafka.properties"
+  KAFKA_TRUSTSTORE_FILE: "kafka.truststore.jks"
+  KAFKA_KEYSTORE_FILE: "kafka.keystore.jks"
+  SERVER_PORT: "9000"
+  CMD_ARGS: "--topic.deleteEnabled=false --topic.createEnabled=false"

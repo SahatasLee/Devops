@@ -7,7 +7,7 @@ metadata:
   name: kafdrop-poc
   namespace: kafka
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app.kubernetes.io/instance: kafdrop-poc
@@ -43,28 +43,32 @@ spec:
           value: "9000"
         - name: CMD_ARGS
           value: --topic.deleteEnabled=false --topic.createEnabled=false
-        image: obsidiandynamics/kafdrop:latest
-        imagePullPolicy: Always
-        name: kafdrop-poc
-        ports:
-        - containerPort: 9000
-          name: http
-          protocol: TCP
-        resources:
-          requests:
-            cpu: 250m
-            memory: 512Mi
+      image: obsidiandynamics/kafdrop:latest
+      imagePullPolicy: Always
+      name: kafdrop-poc
+      ports:
+      - containerPort: 9000
+        name: http
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 250m
+          memory: 512Mi
+        limits:
+          cpu: 500m
+          memory: 1Gi
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: kafdrop-poc-bootstrap
+  name: kafdrop-poc
   namespace: kafka
-  annotations:
-    metallb.universe.tf/allow-shared-ip: "key-to-share-10.111.0.128"
+  # annotations:
+  #   metallb.universe.tf/allow-shared-ip: "key-to-share-10.111.0.128"
 spec:
-  type: LoadBalancer
-  loadBalancerIP: 10.111.0.128
+  type: NodePort
+  # type: LoadBalancer
+  # loadBalancerIP: 10.111.0.128
   ports:
     - name: kafdrop-poc
       protocol: TCP

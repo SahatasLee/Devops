@@ -12,7 +12,7 @@ spec:
   authorization:
     type: simple
     acls:
-      # access to kafka topic [READ]
+      # access to kafka topic [All]
       - resource:
           type: topic
           name: topic-test

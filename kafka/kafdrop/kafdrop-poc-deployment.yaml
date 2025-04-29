@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/instance: kafdrop-poc
+    app.kubernetes.io/name: kafdrop-poc
+  name: kafdrop-poc
+  namespace: kafka
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: kafdrop-poc
+      app.kubernetes.io/name: kafdrop-poc
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: kafdrop-poc
+        app.kubernetes.io/name: kafdrop-poc
+    spec:
+      containers:
+      - name: kafdrop-poc
+        image: obsidiandynamics/kafdrop:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 9000
+          name: http
+          protocol: TCP
+        envFrom:
+        - configMapRef:
+            name: kafdrop-poc-config
+        resources:
+          requests:
+            cpu: 250m
+            memory: 512Mi
+          limits:
+            cpu: 500m
+            memory: 1Gi

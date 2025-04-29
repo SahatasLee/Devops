@@ -1,0 +1,19 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafdrop-poc
+  namespace: kafka
+  # annotations:
+  #   metallb.universe.tf/allow-shared-ip: "key-to-share-10.111.0.128"
+spec:
+  type: NodePort
+  # type: LoadBalancer
+  # loadBalancerIP: 10.111.0.128
+  ports:
+    - name: kafdrop-poc
+      protocol: TCP
+      port: 9037
+      targetPort: 9000
+  selector:
+    app.kubernetes.io/name: kafdrop-poc

@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"strconv"
 	"strings"
 
 	"github.com/sahataslee/kafka/utils"
@@ -17,10 +16,10 @@ import (
 
 func main() {
 	// Connection
-	Url := "kafka.thaibevapp.com:9094"
-	Topic := "eaadmin-topic"
-	User := "ea-test"
-	Password := "BalN5xG1ba62"
+	Url := "10.111.0.117:9094"
+	Topic := "test"
+	User := "admin"
+	Password := "DMNjJpCk993y"
 	// cfg := config.KafkaConnCfg{
 	// 	Url:   "10.111.0.124:9094",
 	// 	Topic: "topic-test",
@@ -40,22 +39,25 @@ func main() {
 	}
 
 	writer := kafka.Writer{
-		Addr:      kafka.TCP(Url),
-		Topic:     Topic,
-		Balancer:  &kafka.LeastBytes{},
+		Addr:     kafka.TCP(Url),
+		Topic:    Topic,
+		Balancer: &kafka.LeastBytes{},
+		// Balancer: &kafka.Hash{},
+		// Balancer:  &kafka.RoundRobin{},
 		Transport: sharedTransport,
+		// Compression: kafka.Snappy,
+		// AllowAutoTopicCreation: false,
 	}
 
 	// สร้างข้อมูลสำหรับส่งไปยัง Kafka
 	for {
-		// key := []byte(strconv.Itoa(i))
-		// value := []byte("Hello, world" + strconv.Itoa(i) + "!")
 		value := InputMessages()
 		if value == "exit" {
 			break
 		}
 		message := kafka.Message{
-			Key:   []byte(strconv.Itoa(8)),
+			// Key:   []byte(strconv.Itoa(8)),
+			Key:   []byte(value),
 			Value: []byte(utils.CompressToJsonBytes(value)),
 		}
 		// สร้าง context สำหรับการส่งข้อมูลไปยัง Kafka
@@ -63,7 +65,8 @@ func main() {
 		if err != nil {
 			fmt.Printf("Error sending message => (%v)\n", err)
 			log.Printf("Message sent to Kafka => (%s)\n", message.Value)
-			continue
+		} else {
+			fmt.Printf("Message sent to Kafka => (%s), Key: %v\n", message.Value, message.Key)
 		}
 	}
 
